@@ -1,6 +1,6 @@
 package com.rrvrafael.cursojava.exerciciosaula13;
 
-public class Exercicio1 {
+public class ExercicioUm {
 
 	public static void main(String[] args) {
 		
