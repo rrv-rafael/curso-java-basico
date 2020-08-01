@@ -8,7 +8,7 @@ public class LeituraDadosTeclado {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		/*System.out.println("Digite seu nome completo: ");
+		System.out.println("Digite seu nome completo: ");
 		String nomeCompleto = scan.nextLine();
 		System.out.println("Seu nome completo é: " + nomeCompleto);
 		
@@ -22,7 +22,7 @@ public class LeituraDadosTeclado {
 		
 		System.out.println("Digite a sua altura: ");
 		double altura = scan.nextDouble();
-		System.out.println("Sua altura é: " + altura);*/
+		System.out.println("Sua altura é: " + altura);
 		
 		System.out.println("Digite seu primeiro nome, idade, quantidade de filhos, altura e se tem bichinho de estimação: ");
 		String primeiroNome = scan.next();
@@ -30,7 +30,6 @@ public class LeituraDadosTeclado {
 		byte qtdFilhos = scan.nextByte();
 		double altura = scan.nextDouble();
 		boolean temPet = scan.nextBoolean();
-		//System.out.println("Você digitou os seguintes valores: " + primeiroNome + idade + qtdFilhos + altura + temPet);
 		System.out.println("Você digitou os seguintes valores:");
 		System.out.println("Primeiro nome: " + primeiroNome);
 		System.out.println("Idade: " + idade);
