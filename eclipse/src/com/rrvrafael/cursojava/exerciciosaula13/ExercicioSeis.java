@@ -17,10 +17,7 @@ public class ExercicioSeis {
 		
 		areaCirculo = 3.14 * (raioCirculo * raioCirculo);
 		
-		System.out.println("√Årea do circulo: " + areaCirculo);
-
-		System.out.println("A woman");
-		System.out.println();
+		System.out.println("¡rea do circulo " + areaCirculo);
 	}
 
 }
