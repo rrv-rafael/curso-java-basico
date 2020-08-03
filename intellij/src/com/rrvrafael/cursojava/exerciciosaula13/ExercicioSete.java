@@ -8,13 +8,14 @@ public class ExercicioSete {
 
         Scanner scan = new Scanner(System.in);
 
-        int ladoQuadrado, areaQuadrado;
+        double ladoQuadrado, areaQuadrado;
 
         System.out.println("Digite o lado do quadrado: ");
         ladoQuadrado = scan.nextInt();
 
-        areaQuadrado = (ladoQuadrado * ladoQuadrado);
+        areaQuadrado = Math.pow(ladoQuadrado, 2);
 
+        System.out.println("Área do quadrado: " + areaQuadrado);
         System.out.println("Dobro da área do quadrado: " + (areaQuadrado * 2));
     }
 }

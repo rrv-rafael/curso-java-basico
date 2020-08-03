@@ -13,7 +13,8 @@ public class ExercicioSeis {
         System.out.println("Digite o raio do circulo: ");
         raioCirculo = scan.nextDouble();
 
-        areaCirculo = 3.14 * (raioCirculo * raioCirculo);
+        //areaCirculo = 3.14 * (raioCirculo * raioCirculo);
+        areaCirculo = Math.PI * Math.pow(raioCirculo, 2);
 
         System.out.println("Área do circulo: " + areaCirculo);
     }

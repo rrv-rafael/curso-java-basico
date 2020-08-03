@@ -12,7 +12,7 @@ public class ExercicioQuatorze {
 
         System.out.println("Digite o tamanho do arquivo em MB: ");
         tamArq = scan.nextDouble();
-        System.out.println("Digite a velocidade de um link de internet (em Mbps): ");
+        System.out.println("Digite a velocidade do link de internet (em Mbps): ");
         velLinkInt = scan.nextDouble();
 
         tamArqMbps = (tamArq * 8);

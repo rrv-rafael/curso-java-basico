@@ -1,7 +1,6 @@
 package com.rrvrafael.cursojava.exerciciosaula13;
 
 import java.util.Scanner;
-import java.lang.Math;
 
 public class ExercicioOnze {
 
@@ -19,7 +18,7 @@ public class ExercicioOnze {
         System.out.println("Digite o número real: ");
         numReal = scan.nextDouble();
 
-        produto = (n1 * 2) * ((double)n2 / 2); //O double antes do n2 serve para converter a divisão de 2 números inteiros em um número real
+        produto = (n1 * 2) * ((double)n2 / 2); //O double antes do n2 serve para converter o resultado da divisão de 2 números inteiros em um número real
         soma = (n1 * 3) + numReal;
         numAoCubo = Math.pow(numReal,3);
 
