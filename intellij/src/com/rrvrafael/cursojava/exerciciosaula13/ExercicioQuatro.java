@@ -4,11 +4,9 @@ import java.util.Scanner;
 
 public class ExercicioQuatro {
 
-    private static Scanner scan;
-
     public static void main(String[] args) {
 
-        scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         double nota1, nota2, nota3, nota4, media;
 

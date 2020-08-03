@@ -4,11 +4,9 @@ import java.util.Scanner;
 
 public class ExercicioTres {
 
-    private static Scanner scan;
-
     public static void main(String[] args) {
 
-        scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         int n1, n2;
 

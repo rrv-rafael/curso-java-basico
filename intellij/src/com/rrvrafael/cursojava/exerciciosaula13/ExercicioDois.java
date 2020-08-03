@@ -4,11 +4,9 @@ import java.util.Scanner;
 
 public class ExercicioDois {
 
-    private static Scanner scan;
-
     public static void main(String[] args) {
 
-        scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         int numero;
 
