@@ -8,28 +8,33 @@ public class ExercicioQuatorze {
 
         Scanner scan = new Scanner(System.in);
 
-        double tamArq, velLinkInt, tamArqBytes, tempAproximadoMinuto,tempAproximadoTotal;
+        double tamArq, velLinkInt, tamArqMbps, tempAproximado,tempAproximadoTotal;
 
-        System.out.println(10 * 1000000);
         System.out.println("Digite o tamanho do arquivo em MB: ");
         tamArq = scan.nextDouble();
         System.out.println("Digite a velocidade de um link de internet (em Mbps): ");
         velLinkInt = scan.nextDouble();
 
-        tempAproximadoMinuto = (velLinkInt * 125000) * 60;
-        tamArqBytes = (tamArq * 1000000);
+        tamArqMbps = (tamArq * 8);
+        tempAproximado = (tamArqMbps / velLinkInt);
+
+        if (tempAproximado < 60)
+        {
+            System.out.println("Tempo aproximado para o download: " + tempAproximado + " segundos");
+        }
+        else
+        {
+            System.out.println("Tempo aproximado para o download: " + (tempAproximado / 60) + " minutos");
+        }
+
         //1 megabit equivale a 125000 bytes
 
         //Exemplo de entradas:
-        //O tamanho do arquivo é de 10 megabytes
+        //O tamanho do arquivo é de 100 megabytes
         //A velocidade de Mbps é de 100 megabits por segundo
-        //1 megabit equivale a 125000 bytes, portanto tenho que multiplicar velLinkInt por 125000 pra saber quantos bytes por segundo são baixados
-        //1 MB equivale a 1000000 de bytes
-        //No caso de 12,5 bytes por segundo, em um minuto são 750bytes baixados, em uma hora 45,000
-
-        System.out.println(tamArq);
-        //System.out.println("Tamanho do arquvo em bytes: " + tamArqBytes);
-        //System.out.println("Velocidade do link em bytes por minuto: " + tempAproximadoMinuto);
-        //System.out.println("Tempo aproximado para o download: " + tempAproximadoTotal);
+        //1 megabyte equivale a 8 megabits. 100 megabyte, são 100 megabyte * 8 megabit para saber quantos megabits são, que no caso são 800 megabits
+        //Para saber o tempo de download, divido o tamanho do arquivo em megabit pela velocidade em megabit, ou seja, arquivo com 800mbps dividido por 100mbps
+        //Então são 8 segundos para baixar este arquivo, caso seja um arquivo com mais de 59 segundos, então divido o tempo por 60 para saber o tempo em minutos
+        //No caso, se fossem 120 segundos, dividindo por 60, saberia - se que demoram 2 minutos para fazer o download.
     }
 }
