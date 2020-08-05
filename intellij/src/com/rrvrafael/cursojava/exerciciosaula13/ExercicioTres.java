@@ -15,6 +15,6 @@ public class ExercicioTres {
         System.out.println("Digite o 2o valor: ");
         n2 = scan.nextInt();
 
-        System.out.println("Soma dos números digitados: " + (n1 + n2));
+        System.out.println("Soma dos números digitados: " + n1 + n2);
     }
 }
