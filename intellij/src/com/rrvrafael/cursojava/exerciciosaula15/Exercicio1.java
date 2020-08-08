@@ -8,7 +8,7 @@ public class Exercicio1 {
 
         Scanner scan = new Scanner(System.in);
 
-        int n1, n2, maior;
+        int n1, n2;
 
         System.out.println("Digite o 1o valor: ");
         n1 = scan.nextInt();
