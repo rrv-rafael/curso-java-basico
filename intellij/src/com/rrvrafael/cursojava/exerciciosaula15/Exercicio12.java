@@ -8,8 +8,8 @@ public class Exercicio12 {
 
         Scanner scan = new Scanner(System.in);
 
-        double salarioBruto, salarioLiquido, ir, sindicato, fgts, inss, valorHora, qtdHoraMes, totalDescontos;
-        String percentual;
+        double salarioBruto, salarioLiquido, ir, fgts, inss, valorHora, qtdHoraMes, totalDescontos;
+        int percentual;
 
         System.out.println("Digite o quanto você ganha por hora:");
         valorHora = scan.nextDouble();
@@ -19,37 +19,32 @@ public class Exercicio12 {
 
         salarioBruto = valorHora * qtdHoraMes;
 
-        if (salarioBruto < 901)
+        if (salarioBruto <= 900)
         {
-            ir = 0;
-            percentual = "Isento";
+            percentual = 0;
         }
-        else if (salarioBruto > 900 && salarioBruto < 1501)
+        else if (salarioBruto > 900 && salarioBruto <= 1500)
         {
-            ir = salarioBruto * 0.05;
-            percentual = "5%";
+            percentual = 5;
         }
-        else if (salarioBruto > 1500 && salarioBruto < 2501)
+        else if (salarioBruto > 1500 && salarioBruto <= 2500)
         {
-            ir = salarioBruto * 0.1;
-            percentual = "10%";
+            percentual = 10;
         }
         else
         {
-            ir = salarioBruto * 0.2;
-            percentual = "20%";
+            percentual = 20;
         }
 
+        ir = (salarioBruto / 100) * percentual;
         inss = salarioBruto * 0.1;
         fgts = salarioBruto * 0.11;
-        sindicato = salarioBruto * 0.03;
-        totalDescontos = (ir + inss + sindicato);
+        totalDescontos = (ir + inss);
         salarioLiquido = salarioBruto - totalDescontos;
 
         System.out.println("Salário bruto: R$" + salarioBruto);
-        System.out.println("(-) IR (" + percentual + "): R$" + ir);
+        System.out.println("(-) IR (" + percentual + "%): R$" + ir);
         System.out.println("(-) INSS (10%): R$" + inss);
-        System.out.println("(-) Sindicato (3%): R$" + sindicato);
         System.out.println("FGTS (11%): R$" + fgts);
         System.out.println("Total de descontos: R$" + totalDescontos);
         System.out.println("Salário Líquido: R$" + salarioLiquido);

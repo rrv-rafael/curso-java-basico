@@ -9,7 +9,6 @@ public class Exercicio15 {
         Scanner scan = new Scanner(System.in);
 
         int lado1, lado2, lado3;
-        String tipoTriangulo;
 
         System.out.println("Digite o valor do 1o lado:");
         lado1 = scan.nextInt();

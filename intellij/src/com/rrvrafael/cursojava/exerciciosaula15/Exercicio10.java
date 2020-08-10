@@ -8,20 +8,23 @@ public class Exercicio10 {
 
         Scanner scan = new Scanner(System.in);
 
-        char turno;
+        String turno;
 
         System.out.println("Digite o turno que você estuda (M-Matutino | V-Vespertino | N-Noturno):");
-        turno = scan.nextLine().charAt(0);
+        turno = scan.nextLine();
 
         switch (turno)
         {
-            case 'M':
+            case "M":
+            case "m":
                 System.out.println("Bom dia!");
                 break;
-            case 'V':
+            case "V":
+            case "v":
                 System.out.println("Boa tarde!");
                 break;
-            case 'N':
+            case "N":
+            case "n":
                 System.out.println("Boa noite!");
                 break;
             default:

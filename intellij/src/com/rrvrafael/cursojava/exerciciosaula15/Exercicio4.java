@@ -8,31 +8,50 @@ public class Exercicio4 {
 
         Scanner scan = new Scanner(System.in);
 
-        char letra;
+        String letra;
 
         System.out.println("Digite uma letra:");
-        letra = scan.next().charAt(0);
+        letra = scan.next();
 
-        switch (letra)
+        if (letra.length() > 1)
         {
-            case 'a':
-            case 'e':
-            case 'i':
-            case 'o':
-            case 'u':
-                System.out.println("A letra digitada é uma vogal!");
-                break;
-            default:
-                System.out.println("A letra digitada é uma consoante!");
-        }
-
-        if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u')
-        {
-            System.out.println("A letra digitada é uma vogal!");
+            System.out.println("Digite apenas uma letra!");
         }
         else
         {
-            System.out.println("A letra digitada é uma consoante!");
+            switch (letra)
+            {
+                case "a":
+                case "e":
+                case "i":
+                case "o":
+                case "u":
+                case "A":
+                case "E":
+                case "I":
+                case "O":
+                case "U":
+                    System.out.println("A letra digitada é uma vogal!");
+                    break;
+                default:
+                    System.out.println("A letra digitada é uma consoante!");
+            }
+        }
+
+        if (letra.length() > 1)
+        {
+            System.out.println("Digite apenas uma letra!");
+        }
+        else
+        {
+            if (letra.equalsIgnoreCase("a") || letra.equalsIgnoreCase("e") || letra.equalsIgnoreCase("i") || letra.equalsIgnoreCase("o") || letra.equalsIgnoreCase("u"))
+            {
+                System.out.println("A letra digitada é uma vogal!");
+            }
+            else
+            {
+                System.out.println("A letra digitada é uma consoante!");
+            }
         }
     }
 }

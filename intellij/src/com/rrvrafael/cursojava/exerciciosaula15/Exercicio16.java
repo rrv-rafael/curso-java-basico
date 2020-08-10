@@ -30,11 +30,22 @@ public class Exercicio16 {
             }
             else if (delta == 0)
             {
+                double x;
+
+                x = (-b) / (2 * a);
+
                 System.out.println("A equação possui apenas uma raiz real!");
+                System.out.println("Logo a raiz dessa equação é: " + x);
             }
             else
             {
+                double x1, x2;
+
+                x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                x2 = (-b - Math.sqrt(delta)) / (2 * a);
+
                 System.out.println("A equação possui duas raizes reais!");
+                System.out.println("Logo as raízes dessa equação são: " + x1 + " e " + x2);
             }
         }
         else

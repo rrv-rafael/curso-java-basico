@@ -10,7 +10,7 @@ public class Exercicio13 {
 
         int num;
 
-        System.out.println("Digite um número:");
+        System.out.println("Entre com o dia da semana (1-7):");
         num = scan.nextInt();
 
         switch (num)

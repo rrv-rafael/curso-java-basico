@@ -8,16 +8,16 @@ public class Exercicio3 {
 
         Scanner scan = new Scanner(System.in);
 
-        char sexo;
+        String letra;
 
-        System.out.println("Digite o seu sexo:");
-        sexo = scan.next().charAt(0);
+        System.out.println("Digite uma letra (F ou M):");
+        letra = scan.next();
 
-        if (sexo == 'F')
+        if (letra.equalsIgnoreCase("F"))
         {
             System.out.println("F - Feminino");
         }
-        else if (sexo == 'M')
+        else if (letra.equalsIgnoreCase("M"))
         {
             System.out.println("M - Masculino");
         }
