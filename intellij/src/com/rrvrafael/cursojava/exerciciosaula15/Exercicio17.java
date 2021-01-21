@@ -13,13 +13,13 @@ public class Exercicio17 {
         System.out.println("Digite o número correspondente ao ano que deseja:");
         ano = scan.nextInt();
 
-        if (ano % 4 == 0 && ano % 100 != 0 || ano % 400 == 0)
+        if ((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0)
         {
-            System.out.println("É bissexto!");
+            System.out.println("O ano " + ano + " é bissexto!");
         }
         else
         {
-            System.out.println("Não é bissexto!");
+            System.out.println("O ano " + ano + " não é bissexto!");
         }
     }
 }

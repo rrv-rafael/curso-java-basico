@@ -9,7 +9,7 @@ public class Exercicio14 {
         Scanner scan = new Scanner(System.in);
 
         double nota1, nota2, media;
-        String conceito, aprovacao;
+        String conceito;
 
         System.out.println("Digite a 1a nota parcial:");
         nota1 = scan.nextDouble();
@@ -18,7 +18,7 @@ public class Exercicio14 {
 
         media = (nota1 + nota2) / 2;
 
-        if (media >= 9)
+        if (media >= 9 && media <= 10)
         {
             conceito = "A";
         }
@@ -39,18 +39,17 @@ public class Exercicio14 {
             conceito = "E";
         }
 
-        if (conceito == "A" || conceito == "B" || conceito == "C")
-        {
-            aprovacao = "APROVADO";
-        }
-        else
-        {
-            aprovacao = "REPROVADO";
-        }
-
         System.out.println("Nota 1: " + nota1 + " | " + "Nota 2: " + nota2);
         System.out.println("Média: " + media);
         System.out.println("Conceito: " + conceito);
-        System.out.println(aprovacao);
+
+        if (conceito.equals("A") || conceito.equals("B") || conceito.equals("C"))
+        {
+            System.out.println("APROVADO");
+        }
+        else
+        {
+            System.out.println("REPROVADO");
+        }
     }
 }
