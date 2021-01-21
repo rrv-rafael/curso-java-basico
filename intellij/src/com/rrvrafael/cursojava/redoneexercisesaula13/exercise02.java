@@ -12,6 +12,6 @@ public class exercise02 {
         System.out.println("Digite um número:");
         numero = scan.nextInt();
 
-        System.out.println("Número digitado: " + numero);
+        System.out.println("O número informado foi " + numero);
     }
 }
