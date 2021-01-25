@@ -23,21 +23,13 @@ public class exercise14 {
 
         tempoAproximado = tamArquivo / (velLinkInternet / 8);
 
-        System.out.println(tempoAproximado);
-
         if (tempoAproximado < 60)
         {
-            System.out.println("O tempo aproximado de download do arquivo usando este link é: " + tempoAproximado + " segundos");
+            System.out.println("Tempo aproximado para o download: " + tempoAproximado + " segundos.");
         }
         else
         {
-            tempoAproximado = tempoAproximado / 60;
-            System.out.println("O tempo aproximado de download do arquivo usando este link é: " + tempoAproximado + " minutos");
+            System.out.println("Tempo aproximado para o download: " + tempoAproximado / 60 + " minutos.");
         }
-
-
-        //
-
-
     }
 }
