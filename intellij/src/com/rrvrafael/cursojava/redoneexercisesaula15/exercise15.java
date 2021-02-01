@@ -17,7 +17,7 @@ public class exercise15 {
         System.out.println("Digite o Lado 3:");
         lado3 = scan.nextInt();
 
-        if (lado1 + lado2 < lado3 || lado1 + lado3 < lado2 || lado2 + lado3 < lado1)
+        if (lado1 + lado2 > lado3 && lado1 + lado3 > lado2 && lado2 + lado3 > lado1)
         {
             if (lado1 == lado2 && lado2 == lado3)
             {

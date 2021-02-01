@@ -23,7 +23,6 @@ public class Exercicio22 {
         {
             valorMorango = qtdMorango * 2.2;
         }
-
         if (qtdMaca <= 5)
         {
             valorMaca = qtdMaca * 1.8;
