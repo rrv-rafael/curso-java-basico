@@ -23,6 +23,7 @@ public class exercise23 {
             switch (tipoCarne)
             {
                 case "F":
+                    tipoCarne = "Filé Duplo";
                     if (qtdKg <= 5)
                     {
                         valorTotal = qtdKg * 4.9;
@@ -33,6 +34,7 @@ public class exercise23 {
                     }
                 break;
                 case "A":
+                    tipoCarne = "Alcatra";
                     if (qtdKg <= 5)
                     {
                         valorTotal = qtdKg * 5.9;
@@ -43,6 +45,7 @@ public class exercise23 {
                     }
                 break;
                 case "P":
+                    tipoCarne = "Picanha";
                     if (qtdKg <= 5)
                     {
                         valorTotal = qtdKg * 6.9;
@@ -59,7 +62,7 @@ public class exercise23 {
 
             System.out.println("Cupom fiscal:" + '\n');
             System.out.println("Tipo de carne: " + tipoCarne);
-            System.out.println("Quantidade (em Kg): " + qtdKg);
+            System.out.println("Quantidade: " + qtdKg + "kg");
             System.out.println("Preço total: " + valorTotal);
 
             if (tipoPagamento.equals("S") || tipoPagamento.equals("s"))
