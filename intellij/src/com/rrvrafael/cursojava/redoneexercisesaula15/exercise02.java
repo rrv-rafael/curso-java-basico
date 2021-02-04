@@ -13,11 +13,11 @@ public class exercise02 {
         System.out.println("Informe um valor:");
         valor = scan.nextInt();
 
-        if (valor > -1 && valor != 0)
+        if (valor > 0)
         {
             System.out.println("O número " + valor + " é positivo.");
         }
-        else if (valor < 1 && valor != 0)
+        else if (valor < 0)
         {
             System.out.println("O número " + valor + " é negativo.");
         }

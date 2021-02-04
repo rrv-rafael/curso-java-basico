@@ -10,14 +10,14 @@ public class exercise03 {
 
         String letra;
 
-        System.out.println("Digite uma letra:");
-        letra = scan.nextLine();
+        System.out.println("Digite uma letra (F ou M):");
+        letra = scan.next();
 
-        if (letra.equals("F") || letra.equals("f"))
+        if (letra.equalsIgnoreCase("F"))
         {
             System.out.println("F - Feminino.");
         }
-        else if (letra.equals("M") || letra.equals("m"))
+        else if (letra.equalsIgnoreCase("M"))
         {
             System.out.println("M - Masculino.");
         }

@@ -13,7 +13,7 @@ public class exercise04 {
         System.out.println("Digite uma letra:");
         letra = scan.nextLine();
 
-        /*if ((letra.equals("A") || letra.equals("a")) || (letra.equals("E") || letra.equals("e")) || (letra.equals("I") || letra.equals("i")) || (letra.equals("O") || letra.equals("o")) || (letra.equals("U") || letra.equals("u")))
+        /*if (letra.equalsIgnoreCase("A") || letra.equalsIgnoreCase("E") || letra.equalsIgnoreCase("I") || letra.equalsIgnoreCase("O") || letra.equalsIgnoreCase("U"))
         {
             System.out.println("Você digitou uma vogal!");
         }
