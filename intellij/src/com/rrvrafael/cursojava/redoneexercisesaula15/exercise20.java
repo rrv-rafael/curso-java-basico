@@ -13,31 +13,31 @@ public class exercise20 {
 
         System.out.println("Você telefonou para a vítima?");
         resposta = scan.next();
-        if (resposta.equals("sim") || resposta.equals("Sim") || resposta.equals("SIM"))
+        if (resposta.equalsIgnoreCase("sim"))
         {
             count++;
         }
         System.out.println("Esteve no local do crime?");
         resposta = scan.next();
-        if (resposta.equals("sim") || resposta.equals("Sim") || resposta.equals("SIM"))
+        if (resposta.equalsIgnoreCase("sim"))
         {
             count++;
         }
         System.out.println("Mora perto da vítima?");
         resposta = scan.next();
-        if (resposta.equals("sim") || resposta.equals("Sim") || resposta.equals("SIM"))
+        if (resposta.equalsIgnoreCase("sim"))
         {
             count++;
         }
         System.out.println("Devia para a vítima?");
         resposta = scan.next();
-        if (resposta.equals("sim") || resposta.equals("Sim") || resposta.equals("SIM"))
+        if (resposta.equalsIgnoreCase("sim"))
         {
             count++;
         }
         System.out.println("Já trabalhou com a vítima?");
         resposta = scan.next();
-        if (resposta.equals("sim") || resposta.equals("Sim") || resposta.equals("SIM"))
+        if (resposta.equalsIgnoreCase("sim"))
         {
             count++;
         }

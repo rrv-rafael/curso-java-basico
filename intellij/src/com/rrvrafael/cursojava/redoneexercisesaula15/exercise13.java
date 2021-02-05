@@ -38,7 +38,6 @@ public class exercise13 {
                 break;
             default:
                 System.out.println("Valor inválido");
-                break;
         }
     }
 }

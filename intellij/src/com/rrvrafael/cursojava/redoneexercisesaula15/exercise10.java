@@ -29,7 +29,6 @@ public class exercise10 {
                 break;
             default:
                 System.out.println("Valor Inválido!");
-                break;
         }
     }
 }

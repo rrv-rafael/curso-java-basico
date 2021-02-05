@@ -8,7 +8,7 @@ public class exercise08 {
 
         Scanner scan = new Scanner(System.in);
 
-        double p1, p2, p3, maisBarato;
+        double p1, p2, p3;
 
         System.out.println("Informe o preço do protudo 1:");
         p1 = scan.nextDouble();

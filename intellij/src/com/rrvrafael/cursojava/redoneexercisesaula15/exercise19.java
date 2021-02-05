@@ -10,12 +10,13 @@ public class exercise19 {
 
         int n1, n2, resultado = 0;
         String operador;
+        boolean operadorValido = true;
 
         System.out.println("Informe o 1o número:");
         n1 = scan.nextInt();
         System.out.println("Informe o 2o número:");
         n2 = scan.nextInt();
-        System.out.println("Informe o operador da operação desejada:");
+        System.out.println("Informe o operador da operação desejada (+, -, *, /):");
         operador = scan.next();
 
         switch (operador)
@@ -37,30 +38,33 @@ public class exercise19 {
                 break;
             default:
                 System.out.println("Operador inválido!");
-                break;
+                operadorValido = false;
         }
 
-        if (resultado % 2 == 0)
+        if (operadorValido)
         {
-            if (resultado > 0)
+            if (resultado % 2 == 0)
             {
-                System.out.println(resultado + " é um número par e positivo!");
+                if (resultado > 0)
+                {
+                    System.out.println(resultado + " é um número par e positivo!");
+                }
+                else
+                {
+                    System.out.println(resultado + " é um número par e negativo!");
+                }
+
             }
             else
             {
-                System.out.println(resultado + " é um número par e negativo!");
-            }
-
-        }
-        else
-        {
-            if (resultado < 0)
-            {
-                System.out.println(resultado + " é um número ímpar e negativo!");
-            }
-            else
-            {
-                System.out.println(resultado + " é um número ímpar e positivo!");
+                if (resultado < 0)
+                {
+                    System.out.println(resultado + " é um número ímpar e negativo!");
+                }
+                else
+                {
+                    System.out.println(resultado + " é um número ímpar e positivo!");
+                }
             }
         }
     }

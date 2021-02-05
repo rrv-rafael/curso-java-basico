@@ -20,7 +20,8 @@ public class exercise16 {
             System.out.println("Informe o valor de c:");
             c = scan.nextDouble();
 
-            delta = Math.sqrt(Math.pow(b, 2) - (4 * a * c));
+            //delta = Math.sqrt(Math.pow(b, 2) - (4 * a * c));
+            delta = Math.pow(b, 2) - (4 * a * c);
 
             if (delta < 0)
             {
@@ -33,8 +34,8 @@ public class exercise16 {
             }
             else
             {
-                raiz1 = (-b + delta) / (2 * a);
-                raiz2 = (-b - delta) / (2 * a);
+                raiz1 = (-b + Math.sqrt(delta)) / (2 * a);
+                raiz2 = (-b - Math.sqrt(delta)) / (2 * a);
                 System.out.println("A equação possui duas raizes reais! Raizes: " + raiz1 + " " + raiz2);
             }
         }

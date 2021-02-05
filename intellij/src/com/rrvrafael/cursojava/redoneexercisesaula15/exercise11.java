@@ -16,27 +16,25 @@ public class exercise11 {
         if (salario <= 280)
         {
             reajuste = 0.2;
-            novoSalario = salario + (salario * reajuste);
         }
         else if (salario > 280 && salario <= 700)
         {
             reajuste = 0.15;
-            novoSalario = salario + (salario * reajuste);
         }
         else if (salario > 700 && salario <= 1500)
         {
             reajuste = 0.1;
-            novoSalario = salario + (salario * reajuste);
         }
         else
         {
             reajuste = 0.05;
-            novoSalario = salario + (salario * reajuste);
         }
 
+        novoSalario = salario + (salario * reajuste);
+
         System.out.println("Salário antes do reajuste: R$" + salario);
-        System.out.println("Percentual de aumento aplicado: " + (int)(reajuste * 100)+ "%");
-        System.out.println("Valor do aumento: R$" + salario * reajuste);
+        System.out.println("Percentual de aumento aplicado: " + ((int)(reajuste * 100)) + "%");
+        System.out.println("Valor do aumento: R$" + (salario * reajuste));
         System.out.println("Novo salário após o aumento: R$" + novoSalario);
     }
 }

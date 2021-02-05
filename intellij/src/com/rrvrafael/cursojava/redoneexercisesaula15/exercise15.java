@@ -17,13 +17,13 @@ public class exercise15 {
         System.out.println("Digite o Lado 3:");
         lado3 = scan.nextInt();
 
-        if (lado1 + lado2 > lado3 && lado1 + lado3 > lado2 && lado2 + lado3 > lado1)
+        if (lado1 + lado2 > lado3 || lado1 + lado3 > lado2 || lado2 + lado3 > lado1)
         {
             if (lado1 == lado2 && lado2 == lado3)
             {
                 System.out.println("Triângulo Equilátero!");
             }
-            else if (lado1 != lado2 && lado2 != lado3)
+            else if (lado1 != lado2 && lado1 != lado3 && lado2 != lado3)
             {
                 System.out.println("Triângulo Escaleno!");
             }

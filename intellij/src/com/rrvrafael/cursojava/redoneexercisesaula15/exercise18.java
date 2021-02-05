@@ -13,7 +13,7 @@ public class exercise18 {
         System.out.println("Digite um número para saber se é par ou ímpar:");
         numero = scan.nextInt();
 
-        if (numero % 2 == 0 && numero != 0)
+        if (numero % 2 == 0)
         {
             System.out.println(numero + " é um número par.");
         }

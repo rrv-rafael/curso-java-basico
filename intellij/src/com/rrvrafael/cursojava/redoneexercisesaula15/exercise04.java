@@ -22,23 +22,29 @@ public class exercise04 {
             System.out.println("Você digitou uma consoante!");
         }*/
 
-        switch (letra)
+        if (letra.length() == 1)
         {
-            case "A":
-            case "a":
-            case "E":
-            case "e":
-            case "I":
-            case "i":
-            case "O":
-            case "o":
-            case "U":
-            case "u":
-                System.out.println("Você digitou uma vogal!");
-                break;
-            default:
-                System.out.println("Você digitou uma consoante!");
-                break;
+            switch (letra) {
+                case "A":
+                case "a":
+                case "E":
+                case "e":
+                case "I":
+                case "i":
+                case "O":
+                case "o":
+                case "U":
+                case "u":
+                    System.out.println("Você digitou uma vogal!");
+                    break;
+                default:
+                    System.out.println("Você digitou uma consoante!");
+                    break;
+            }
+        }
+        else
+        {
+            System.out.println("Você não digitou apenas uma letra!");
         }
     }
 }

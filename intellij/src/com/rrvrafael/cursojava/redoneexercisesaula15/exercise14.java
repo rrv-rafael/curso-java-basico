@@ -11,7 +11,7 @@ public class exercise14 {
         double nota1, nota2, media;
         String conceito, mensagem;
 
-        System.out.println("Informa a 1a nota:");
+        System.out.println("Informe a 1a nota:");
         nota1 = scan.nextDouble();
         System.out.println("Informe a 2a nota:");
         nota2 = scan.nextDouble();
@@ -21,27 +21,27 @@ public class exercise14 {
         if (media >= 9)
         {
             conceito = "A";
-            mensagem = "Aprovado";
+            mensagem = "APROVADO";
         }
         else if (media >= 7.5 && media < 9)
         {
             conceito = "B";
-            mensagem = "Aprovado";
+            mensagem = "APROVADO";
         }
         else if (media >= 6 && media < 7.5)
         {
             conceito = "C";
-            mensagem = "Aprovado";
+            mensagem = "APROVADO";
         }
         else if (media >= 4 && media < 6)
         {
             conceito = "D";
-            mensagem = "Reprovado";
+            mensagem = "REPROVADO";
         }
         else
         {
             conceito = "E";
-            mensagem = "Reprovado";
+            mensagem = "REPROVADO";
         }
 
         System.out.println("Nota 1: " + nota1 + '\n' + "Nota 2: " + nota2);
