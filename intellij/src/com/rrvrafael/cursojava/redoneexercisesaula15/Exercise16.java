@@ -2,7 +2,7 @@ package com.rrvrafael.cursojava.redoneexercisesaula15;
 
 import java.util.Scanner;
 
-public class exercise16 {
+public class Exercise16 {
 
     public static void main(String[] args) {
 
@@ -20,7 +20,6 @@ public class exercise16 {
             System.out.println("Informe o valor de c:");
             c = scan.nextDouble();
 
-            //delta = Math.sqrt(Math.pow(b, 2) - (4 * a * c));
             delta = Math.pow(b, 2) - (4 * a * c);
 
             if (delta < 0)
