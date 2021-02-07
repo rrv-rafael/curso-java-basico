@@ -2,7 +2,7 @@ package com.rrvrafael.cursojava.redoneexercisesaula13;
 
 import java.util.Scanner;
 
-public class exercise04 {
+public class Exercise04 {
 
     public static void main(String[] args) {
 
