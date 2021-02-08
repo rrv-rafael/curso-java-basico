@@ -10,7 +10,7 @@ public class Exercise19 {
 
         int n1, n2, resultado = 0;
         String operador;
-        boolean operadorValido = true;
+        boolean operaçãoValida = true;
 
         System.out.println("Informe o 1o número:");
         n1 = scan.nextInt();
@@ -34,15 +34,21 @@ public class Exercise19 {
                 if (n2 != 0)
                     resultado = n1 / n2;
                 else
+                {
                     System.out.println("Não é possível realizar divisão por 0!");
+                    operaçãoValida = false;
+                }
+
                 break;
             default:
                 System.out.println("Operador inválido!");
-                operadorValido = false;
+                operaçãoValida = false;
         }
 
-        if (operadorValido)
+        if (operaçãoValida)
         {
+            System.out.println("Resultado da operação: " + resultado);
+
             if (resultado % 2 == 0)
             {
                 if (resultado > 0)

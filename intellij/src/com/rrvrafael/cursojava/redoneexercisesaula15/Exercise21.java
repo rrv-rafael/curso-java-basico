@@ -17,7 +17,7 @@ public class Exercise21 {
         System.out.println("Informe o tipo de combustível vendido (A-álcool | G-gasolina):");
         tipoCombustivel = scan.next();
 
-        if (tipoCombustivel.equals("A") || tipoCombustivel.equals("a"))
+        if (tipoCombustivel.equalsIgnoreCase("A"))
         {
             if (qtdLitrosVendidos <= 20)
             {
@@ -28,7 +28,7 @@ public class Exercise21 {
                 valorPagar = qtdLitrosVendidos * 1.9 - ((qtdLitrosVendidos * 1.9) * 0.05);
             }
         }
-        else if (tipoCombustivel.equals("G") || tipoCombustivel.equals("g"))
+        else if (tipoCombustivel.equalsIgnoreCase("G"))
         {
             if (qtdLitrosVendidos <= 20)
             {

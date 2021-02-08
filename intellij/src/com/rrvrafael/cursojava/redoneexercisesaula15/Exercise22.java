@@ -9,7 +9,7 @@ public class Exercise22 {
         Scanner scan = new Scanner(System.in);
 
         int qtdMorango, qtdMaca;
-        double valorPagar, precoMaca, precoMorango;
+        double valorPagar, precoMaca, precoMorango, valorTotalDesc;
 
         System.out.println("Informe a quantidade (em Kg) de morangos:");
         qtdMorango = scan.nextInt();
@@ -42,15 +42,17 @@ public class Exercise22 {
         if (qtdMorango + qtdMaca > 8 || valorPagar > 25)
         {
             valorPagar = valorPagar - (valorPagar * 0.1);
-            System.out.println("Preço pago pelo Morango: " + precoMorango);
-            System.out.println("Preço pago pela Maçã: " + precoMaca);
-            System.out.println("Valor total a pagar com desconto de 10%: " + valorPagar);
+            System.out.println("Entrou aqui");
+            //System.out.println("Preço pago pelo Morango: " + precoMorango);
+            //System.out.println("Preço pago pela Maçã: " + precoMaca);
+            //System.out.println("Valor total a pagar com desconto de 10%: " + valorPagar);
         }
-        else
+        /*else
         {
             System.out.println("Preço pago pelo Morango: " + precoMorango);
             System.out.println("Preço pago pela Maçã: " + precoMaca);
             System.out.println("Valor total a pagar: " + valorPagar);
-        }
+        }*/
+        System.out.println("Valor total a pagar: " + valorPagar);
     }
 }
