@@ -10,28 +10,20 @@ public class Exercise02 {
 
         String user, password;
 
-        System.out.println("Informe seu usuário:");
-        user = scan.next();
-        System.out.println("Informe sua senha:");
-        password = scan.next();
-
-        if (user.compareTo(password) == 0)
-        {
-            System.out.println("Strings iguais!");
-        }
-
-        /*do
+        do
         {
             System.out.println("Informe seu usuário:");
             user = scan.next();
             System.out.println("Informe sua senha:");
             password = scan.next();
+
+            if (user.equals(password))
+            {
+                System.out.println("Erro! O usuário e senha não podem ser iguais!");
+            }
         }
-        while (user. != password);*/
+        while (user.equals(password));
 
-
-
-
-
+        System.out.println("Sucesso!");
     }
 }
