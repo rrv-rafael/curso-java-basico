@@ -8,14 +8,12 @@ public class Exercise18 {
 
         Scanner scan = new Scanner(System.in);
 
-        /*
-        int numero, count = 0;
-        //boolean primo = false;
+        int numero, count = 0, qtdDivisivel, numeroAnterior, qtdPrimo = 0;
 
         System.out.println("Por favor, digite um número inteiro:");
         numero = scan.nextInt();
 
-        //Um número primo é aquele que é divisível apenas por 1 e por ele mesmo
+        //Código para dizer se o número digitado é primo:
 
         for (int i = numero; i > 0; i--)
         {
@@ -33,23 +31,23 @@ public class Exercise18 {
         if (count == 2)
         {
             System.out.println("O número digitado é primo!");
-        }*/
+        }
 
-        int qtdDivisivel, numero, qtdPrimo = 0;
+        //Código para mostrar os números primos dentro de um intervalo:
 
         for (int i = 1; i < 1000; i++)
         {
-            numero = i;
+            numeroAnterior = i;
             qtdDivisivel = 0;
 
-            while (numero > 0)
+            while (numeroAnterior > 0)
             {
-                if (i % numero == 0)
+                if (i % numeroAnterior == 0)
                 {
                     qtdDivisivel++;
                 }
 
-                numero--;
+                numeroAnterior--;
             }
 
             if (qtdDivisivel == 2)
