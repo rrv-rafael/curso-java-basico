@@ -11,54 +11,97 @@ public class Exercise03 {
         String nome, sexo, estadoCivil;
         int idade;
         double salario;
+        boolean infoValida = false;
 
-        System.out.println("Digite seu nome:");
-        nome = scan.next();
-
-        while (nome.length() < 4)
+        do
         {
-            System.out.println("Nome inválido! O nome deve conter no minímo 3 caracteres. Por favor, digite novamente:");
+            System.out.println("Informe seu nome:");
             nome = scan.next();
+
+            if (nome.length() > 3)
+            {
+                infoValida = true;
+            }
+            else
+            {
+                System.out.println("Nome inválido! O nome deve conter no minímo 3 caracteres. Digite novamente.");
+            }
         }
+        while (!infoValida);
 
-        System.out.println("Informe sua idade:");
-        idade = scan.nextInt();
+        infoValida = false;
 
-        while (idade < 0 || idade > 150)
+        do
         {
-            System.out.println("Idade inválida! A idade não pode ser menor que 0 nem maior que 150! Por favor, digite novamente:");
+            System.out.println("Informe sua idade:");
             idade = scan.nextInt();
+
+            if (idade > 0 && idade < 150)
+            {
+                infoValida = true;
+            }
+            else
+            {
+                System.out.println("Idade inválida! A idade não pode ser menor que 0 nem maior que 150! Por favor, digite novamente.");
+            }
         }
+        while (!infoValida);
 
-        System.out.println("Informe seu salário:");
-        salario = scan.nextDouble();
+        infoValida = false;
 
-        while (salario < 1)
+        do
         {
-            System.out.println("Salário inválido! O salário deve ser maior que 0! Por favor, digite novamente:");
+            System.out.println("Informe seu salário:");
             salario = scan.nextDouble();
+
+            if (salario > 0)
+            {
+                infoValida = true;
+            }
+            else
+            {
+                System.out.println("Salário inválido! O salário deve ser maior que 0! Por favor, digite novamente.");
+            }
         }
+        while (!infoValida);
 
-        System.out.println("Informe seu sexo:");
-        sexo = scan.next();
+        infoValida = false;
 
-        while (!(sexo.equalsIgnoreCase("f") || sexo.equalsIgnoreCase("m")))
+        do
         {
-            System.out.println("Sexo inválido! Você deve digitar F - Feminino ou M - Masculino! Por favor, digite novamente:");
+            System.out.println("Informe seu sexo:");
             sexo = scan.next();
+
+            if (sexo.equalsIgnoreCase("f") || sexo.equalsIgnoreCase("m"))
+            {
+                infoValida = true;
+            }
+            else
+            {
+                System.out.println("Sexo inválido! Você deve digitar F - Feminino ou M - Masculino! Por favor, digite novamente.");
+            }
         }
+        while (!infoValida);
 
-        System.out.println("Informe seu estado civil:");
-        estadoCivil = scan.next();
+        infoValida = false;
 
-        while (!(estadoCivil.equalsIgnoreCase("s") || estadoCivil.equalsIgnoreCase("c") || estadoCivil.equalsIgnoreCase("v") || estadoCivil.equalsIgnoreCase("d")))
+        do
         {
-            System.out.println("Estado civil inválido! Você deve digitar S - Solteiro(a) | C - Casado(a) | V - Viúvo(a) | D - Divorciado(a)! Por favor, digite novamente:");
+            System.out.println("Informe seu estado civil:");
             estadoCivil = scan.next();
+
+            if (estadoCivil.equalsIgnoreCase("s") || estadoCivil.equalsIgnoreCase("c") || estadoCivil.equalsIgnoreCase("v") || estadoCivil.equalsIgnoreCase("d"))
+            {
+                infoValida = true;
+            }
+            else
+            {
+                System.out.println("Estado civil inválido! Você deve digitar S - Solteiro(a) | C - Casado(a) | V - Viúvo(a) | D - Divorciado(a)! Por favor, digite novamente.");
+            }
         }
+        while (!infoValida);
 
-
-        System.out.println("Informações preenchidas:" + '\n');
+        System.out.println("Informações preenchidas:");
         System.out.println("Nome: " + nome);
         System.out.println("Idade: " + idade);
         System.out.println("Salário: " + salario);

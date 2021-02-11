@@ -4,21 +4,18 @@ public class Exercise04 {
 
     public static void main(String[] args) {
 
-        double A = 80000, B = 200000;
-        int countAnos = 0;
+        int populacaoA = 80000, populacaoB = 200000, countAnos = 0;
 
 
-        while (A <= B)
+        while (populacaoA < populacaoB)
         {
-            System.out.println("A - antes: " + A);
-            A = A + (A * 0.03);
-            System.out.println("A - depois: " + A);
-            System.out.println("B - antes: " + B);
-            B = B + (B * 0.015);
-            System.out.println("B - depois: " + B);
+            populacaoA += (populacaoA / 100) * 3;
+            populacaoB += (populacaoB / 100) * 1.5;
             countAnos++;
         }
 
+        System.out.println("População A: " + populacaoA);
+        System.out.println("População B: " + populacaoB);
         System.out.println("Serão necessários " + countAnos + " anos para a população do país A passar a de B!");
     }
 }

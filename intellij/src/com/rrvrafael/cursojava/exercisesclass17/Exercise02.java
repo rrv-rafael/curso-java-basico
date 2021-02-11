@@ -17,13 +17,15 @@ public class Exercise02 {
             System.out.println("Informe sua senha:");
             password = scan.next();
 
-            if (user.equals(password))
+            if (user.equalsIgnoreCase(password))
             {
-                System.out.println("Erro! O usuário e senha não podem ser iguais!");
+                System.out.println("Erro! O usuário e senha não podem ser iguais! Digite novamente.");
+            }
+            else
+            {
+                System.out.println("Usuário e senha válidos!");
             }
         }
-        while (user.equals(password));
-
-        System.out.println("Sucesso!");
+        while (user.equalsIgnoreCase(password));
     }
 }
