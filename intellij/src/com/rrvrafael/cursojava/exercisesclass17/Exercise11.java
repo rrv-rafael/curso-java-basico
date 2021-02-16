@@ -18,8 +18,7 @@ public class Exercise11 {
 
         if (n1 < n2)
         {
-            n1++;
-            while (n1 < n2)
+            while (n1 <= n2)
             {
                 soma += n1;
                 System.out.println(n1);
@@ -28,7 +27,6 @@ public class Exercise11 {
         }
         else
         {
-            n2++;
             while (n2 < n1)
             {
                 soma += n2;

@@ -13,9 +13,25 @@ public class Exercise18 {
         System.out.println("Por favor, digite um número inteiro:");
         numero = scan.nextInt();
 
+        boolean primo = true;
+
+        for (int i = 2; i < numero; i++)
+        {
+            if (numero % i == 0)
+            {
+                System.out.println("não é primo");
+                primo = false;
+            }
+        }
+
+        if (primo)
+        {
+            System.out.println("é primo");
+        }
+
         //Código para dizer se o número digitado é primo:
 
-        for (int i = numero; i > 0; i--)
+        /*for (int i = numero; i > 0; i--)
         {
             if (numero % i == 0)
             {
@@ -57,6 +73,6 @@ public class Exercise18 {
             }
         }
 
-        System.out.println(qtdPrimo);
+        System.out.println(qtdPrimo);*/
     }
 }

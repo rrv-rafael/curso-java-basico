@@ -7,7 +7,7 @@ public class Exercise04 {
         int populacaoA = 80000, populacaoB = 200000, countAnos = 0;
 
 
-        while (populacaoA < populacaoB)
+        while (populacaoA <= populacaoB)
         {
             populacaoA += (populacaoA / 100) * 3;
             populacaoB += (populacaoB / 100) * 1.5;

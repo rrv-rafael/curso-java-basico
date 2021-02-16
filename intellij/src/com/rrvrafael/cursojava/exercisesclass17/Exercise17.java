@@ -16,6 +16,7 @@ public class Exercise17 {
         for (int i = 1; i <= numero; i++)
         {
             fatorial *= i;
+            System.out.println(fatorial);
         }
 
         System.out.println("Fatorial do número " + numero + ": " + fatorial);

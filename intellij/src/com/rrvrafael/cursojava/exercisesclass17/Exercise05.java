@@ -10,54 +10,87 @@ public class Exercise05 {
 
         double populacaoA, populacaoB, taxaCrescA, taxaCrescB;
         int countAnos = 0;
+        boolean validarDado = false;
 
-        System.out.println("Informe a população do País A:");
-        populacaoA = scan.nextDouble();
-
-        while (populacaoA <= 0)
+        do
         {
-            System.out.println("Digite um número válido:");
+            System.out.println("Informe a população do País A:");
             populacaoA = scan.nextDouble();
+
+            if (populacaoA > 0)
+            {
+                validarDado = true;
+            }
+            else
+            {
+                System.out.println("Valor inválido! Digite novamente.");
+            }
         }
+        while (!validarDado);
 
-        System.out.println("Informe a taxa de crescimento da população do País A:");
-        taxaCrescA = scan.nextDouble();
+        validarDado = false;
 
-        while (taxaCrescA <= 0)
+        do
         {
-            System.out.println("Digite um número válido:");
+            System.out.println("Informe a taxa de crescimento da população do País A:");
             taxaCrescA = scan.nextDouble();
+
+            if (taxaCrescA > 0)
+            {
+                validarDado = true;
+            }
+            else
+            {
+                System.out.println("Valor inválido! Digite novamente.");
+            }
         }
+        while (!validarDado);
 
-        System.out.println("Informe a população do País B:");
-        populacaoB = scan.nextDouble();
+        validarDado = false;
 
-        while (populacaoB <= 0)
+        do
         {
-            System.out.println("Digite um número válido:");
+            System.out.println("Informe a população do País B:");
             populacaoB = scan.nextDouble();
+
+            if (populacaoB > 0)
+            {
+                validarDado = true;
+            }
+            else
+            {
+                System.out.println("Valor inválido! Digite novamente.");
+            }
         }
+        while (!validarDado);
 
-        System.out.println("Informe a taxa de crescimento da população do País B:");
-        taxaCrescB = scan.nextDouble();
+        validarDado = false;
 
-        while (taxaCrescB <= 0)
+        do
         {
-            System.out.println("Digite um número válido:");
+            System.out.println("Informe a taxa de crescimento da população do País B:");
             taxaCrescB = scan.nextDouble();
+
+            if (taxaCrescB > 0 && taxaCrescB < taxaCrescA)
+            {
+                validarDado = true;
+            }
+            else
+            {
+                System.out.println("Valor inválido! Digite novamente.");
+            }
         }
+        while (!validarDado);
 
         while (populacaoA <= populacaoB)
         {
-            System.out.println("A - antes: " + populacaoA);
-            populacaoA = populacaoA + (populacaoA * taxaCrescA);
-            System.out.println("A - depois: " + populacaoA);
-            System.out.println("B - antes: " + populacaoB);
-            populacaoB = populacaoB + (populacaoB * taxaCrescB);
-            System.out.println("B - depois: " + populacaoB);
+            populacaoA = populacaoA + ((populacaoA / 100) * taxaCrescA);
+            populacaoB = populacaoB + ((populacaoB / 100) * taxaCrescB);
             countAnos++;
         }
 
+        System.out.println("População A: " + populacaoA);
+        System.out.println("População B: " + populacaoB);
         System.out.println("Serão necessários " + countAnos + " anos para a população do país A passar a de B!");
     }
 }

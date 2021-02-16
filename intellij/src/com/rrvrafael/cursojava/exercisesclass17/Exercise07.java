@@ -8,7 +8,7 @@ public class Exercise07 {
 
         Scanner scan = new Scanner(System.in);
 
-        int numero, maiorNumero = 0, count = 0;
+        int numero, maiorNumero = Integer.MIN_VALUE, count = 0;
 
         do
         {
