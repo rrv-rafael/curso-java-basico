@@ -9,29 +9,32 @@ public class Exercise18 {
         Scanner scan = new Scanner(System.in);
 
         int numero, count = 0, qtdDivisivel, numeroAnterior, qtdPrimo = 0;
+        boolean primo = true;
 
         System.out.println("Por favor, digite um número inteiro:");
         numero = scan.nextInt();
-
-        boolean primo = true;
 
         for (int i = 2; i < numero; i++)
         {
             if (numero % i == 0)
             {
-                System.out.println("não é primo");
                 primo = false;
+                break;
             }
         }
 
         if (primo)
         {
-            System.out.println("é primo");
+            System.out.println("O número digitado é primo");
+        }
+        else
+        {
+            System.out.println("O número digitado não é primo!");
         }
 
         //Código para dizer se o número digitado é primo:
 
-        /*for (int i = numero; i > 0; i--)
+        for (int i = numero; i > 0; i--)
         {
             if (numero % i == 0)
             {
@@ -73,6 +76,6 @@ public class Exercise18 {
             }
         }
 
-        System.out.println(qtdPrimo);*/
+        System.out.println(qtdPrimo);
     }
 }

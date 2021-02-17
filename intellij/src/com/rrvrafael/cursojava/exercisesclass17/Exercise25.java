@@ -10,6 +10,7 @@ public class Exercise25 {
 
         double valorProduto, total = 0, pagamento, troco;
         int qtdProduto = 0;
+        String output = "\nLojas Tabajara", compra;
 
         System.out.println("Lojas Tabajara");
 
@@ -22,14 +23,14 @@ public class Exercise25 {
 
             total += valorProduto;
 
-            System.out.println("Produto " + qtdProduto + ": R$ " + valorProduto);
+            output += "\nProduto " + qtdProduto + ": R$ " + valorProduto;
 
             if (valorProduto == 0)
             {
-
-
-                System.out.println("Informe o valor em dinheiro fornecido pelo cliente:");
+                System.out.println("\nInforme o valor em dinheiro fornecido pelo cliente:");
                 pagamento = scan.nextDouble();
+
+                System.out.println(output);
 
                 System.out.println("Total: R$ " + total);
                 System.out.println("Dinheiro: R$ " + pagamento);
@@ -37,6 +38,17 @@ public class Exercise25 {
                 troco = pagamento - total;
 
                 System.out.println("Troco: R$ " + troco);
+
+                System.out.println("\nDeseja inserir uma nova compra? S p/ Sim e N p/ Não:");
+                compra = scan.next();
+
+                if (compra.equalsIgnoreCase("s"))
+                {
+                    qtdProduto = 0;
+                    total = 0;
+                    output = "\nLojas Tabajara";
+                    valorProduto = 1;
+                }
             }
         }
         while (valorProduto != 0);
