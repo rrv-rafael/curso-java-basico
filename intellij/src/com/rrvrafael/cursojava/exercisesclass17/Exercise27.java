@@ -8,7 +8,7 @@ public class Exercise27 {
 
         Scanner scan = new Scanner(System.in);
 
-        int qtdTemp, temp, count = 0, maior = 0, menor = 0;
+        int qtdTemp, temp, count = 0, maior = Integer.MIN_VALUE, menor = 0;
         double soma = 0, media;
 
         System.out.println("Por favor, informe a quantidade de temperaturas que irá inserir:");

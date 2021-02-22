@@ -1,5 +1,6 @@
 package com.rrvrafael.cursojava.exercisesclass17;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exercise31 {
@@ -10,6 +11,8 @@ public class Exercise31 {
 
         double salario = 1000, salarioAtual = 0, aumentoPercentual = 0.015;
         int ano = 1995, anoAtual = 2021;
+
+        DecimalFormat format = new DecimalFormat("###,###.##");
 
         for (int i = anoAtual - ano; i > 0; i--)
         {
@@ -25,7 +28,7 @@ public class Exercise31 {
                 salarioAtual = salarioAtual + (salarioAtual * aumentoPercentual);
             }
 
-            System.out.println("Salário no ano de " + ano + ": " + salarioAtual);
+            System.out.println("Salário no ano de " + ano + ": " + format.format(salarioAtual));
         }
         //System.out.println("Salário atual no ano de 2021: " + salarioAtual);
     }

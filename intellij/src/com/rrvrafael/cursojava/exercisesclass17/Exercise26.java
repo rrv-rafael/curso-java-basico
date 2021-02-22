@@ -16,18 +16,13 @@ public class Exercise26 {
         System.out.println("Fatorial de: " + fatorial);
         System.out.print(fatorial + "! = " + fatorial + " . ");
 
-        for (int i = fatorial - 1; i > 0; i--)
+        for (int i = fatorial - 1; i > 1; i--)
         {
-            if (i > 1)
-            {
-                System.out.print(i + " . ");
-            }
-            else
-            {
-                System.out.print(i + " = " + fatorial);
-            }
+            System.out.print(i + " . ");
 
             fatorial *= i;
         }
+
+        System.out.print(1 + " = " + fatorial);
     }
 }

@@ -14,9 +14,9 @@ public class Exercise33 {
         System.out.println("Digite a quantidade de termos desejada:");
         qtdTermos = scan.nextInt();
 
-        for (int i = 0; i < qtdTermos; i++)
+        for (int i = 1; i < qtdTermos; i++)
         {
-            System.out.println(n + "/" + m);
+            System.out.print(n + "/" + m + " + ");
 
             soma += ((double) n / m);
 
@@ -24,6 +24,8 @@ public class Exercise33 {
             m += 2;
         }
 
-        System.out.println("Soma da série: " + soma);
+        System.out.println(n + "/" + m);
+
+        System.out.println("\nSoma da série: " + soma);
     }
 }
