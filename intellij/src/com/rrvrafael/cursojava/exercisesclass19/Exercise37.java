@@ -17,7 +17,7 @@ public class Exercise37 {
 
             vetorB[i] = vetorA[i];
 
-            for (int j = vetorA[i] - 1; j > 1; j--)
+            for (int j = 2; j < vetorA[i]; j++)
             {
                 vetorB[i] *= j;
             }
