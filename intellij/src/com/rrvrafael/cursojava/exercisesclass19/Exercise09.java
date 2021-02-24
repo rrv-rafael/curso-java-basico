@@ -2,7 +2,7 @@ package com.rrvrafael.cursojava.exercisesclass19;
 
 import java.util.Scanner;
 
-public class Exercise07 {
+public class Exercise09 {
 
     public static void main(String[] args) {
 
@@ -10,7 +10,7 @@ public class Exercise07 {
 
         int[] vetorA = new int[10];
         int[] vetorB = new int[10];
-        int[] vetorC = new int[10];
+        double[] vetorC = new double[10];
 
         for (int i = 0; i < vetorA.length; i++)
         {
@@ -26,9 +26,9 @@ public class Exercise07 {
 
         for (int i = 0; i < vetorC.length; i++)
         {
-            vetorC[i] = vetorA[i] - vetorB[i];
+            vetorC[i] = (double) vetorA[i] / vetorB[i];
 
-            System.out.println(vetorA[i] + " - " + vetorB[i] + " = " + vetorC[i]);
+            System.out.println(vetorA[i] + " / " + vetorB[i] + " = " + vetorC[i]);
         }
     }
 }
