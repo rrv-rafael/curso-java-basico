@@ -8,27 +8,40 @@ public class Exercise18 {
 
         Scanner scan = new Scanner(System.in);
 
-        int[] idade = new int[10];
-        int maior = Integer.MIN_VALUE, menor = Integer.MAX_VALUE, posicaoMaior = 0, posicaoMenor = 0;
+        int[] idades = new int[10];
+        int maior, menor, posicaoMaior = 0, posicaoMenor = 0;
 
-        for (int i = 0; i < idade.length; i++)
+        for (int i = 0; i < idades.length; i++)
         {
-            System.out.println("Digite uma idade:");
-            idade[i] = scan.nextInt();
+            System.out.println("Digite uma idades:");
+            idades[i] = scan.nextInt();
+        }
 
-            if (idade[i] > maior)
+        maior = idades[0];
+        menor = idades[0];
+
+        for (int i = 1; i < idades.length; i++)
+        {
+            if (idades[i] > maior)
             {
-                maior = idade[i];
+                maior = idades[i];
                 posicaoMaior = i;
             }
-            if (idade[i] < menor)
+            if (idades[i] < menor)
             {
-                menor = idade[i];
+                menor = idades[i];
                 posicaoMenor = i;
             }
         }
 
-        System.out.println("A maior idade digitada é: " + maior + " e sua posição é: " + posicaoMaior);
+        System.out.println("\nElementos do vetor idades:");
+
+        for (int idade: idades)
+        {
+            System.out.print(idade + " ");
+        }
+
+        System.out.println("\n\nA maior idade digitada é: " + maior + " e sua posição é: " + posicaoMaior);
         System.out.println("A menor idade digitada é: " + menor + " e sua posição é: " + posicaoMenor);
     }
 }

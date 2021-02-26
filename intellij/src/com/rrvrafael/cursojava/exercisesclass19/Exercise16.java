@@ -9,7 +9,7 @@ public class Exercise16 {
         Scanner scan = new Scanner(System.in);
 
         int[] vetorA = new int[10];
-        int somaMenor = 0, somaIgual = 0, somaMaior = 0, count = 0;
+        int somaMenor = 0, somaMaior = 0, countIgual = 0, countMaior = 0;
         double media;
 
         for (int i = 0; i < vetorA.length; i++)
@@ -23,19 +23,26 @@ public class Exercise16 {
             }
             else if (vetorA[i] == 15)
             {
-                somaIgual += vetorA[i];
+                countIgual++;
             }
             else
             {
                 somaMaior += vetorA[i];
-                count++;
+                countMaior++;
             }
         }
 
-        media = (double) somaMaior / count;
+        media = (double) somaMaior / countMaior;
 
-        System.out.println("Soma dos elementos armazenados no vetor A que são inferiores a 15: " + somaMenor);
-        System.out.println("Soma dos elementos armazenados no vetor A que são iguais a 15: " + somaIgual);
+        System.out.println("\nElementos do vetor A:");
+
+        for (int vetor: vetorA)
+        {
+            System.out.print(vetor + " ");
+        }
+
+        System.out.println("\n\nSoma dos elementos armazenados no vetor A que são inferiores a 15: " + somaMenor);
+        System.out.println("Quantidade de elementos armazenados no vetor A que são iguais a 15: " + countIgual);
         System.out.println("Média dos elementos armazenados no vetor A que são superiores a 15: " + media);
     }
 }

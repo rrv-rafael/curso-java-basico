@@ -20,9 +20,11 @@ public class Exercise23 {
             //vetorA[i] = (int) (Math.random() * 100);
         }
 
+        System.out.println("\nElementos do vetor A:");
+
         for (int vetor: vetorA)
         {
-            System.out.println(vetor);
+            System.out.print(vetor + " ");
         }
 
         for (int vetor: vetorA)
@@ -36,11 +38,11 @@ public class Exercise23 {
 
         if (verificar)
         {
-            System.out.println("Todos os valores contidos no vetor A são pares.");
+            System.out.println("\n\nTodos os valores contidos no vetor A são pares.");
         }
         else
         {
-            System.out.println("Existem números ímpares no vetor A");
+            System.out.println("\n\nExistem números ímpares no vetor A");
         }
     }
 }

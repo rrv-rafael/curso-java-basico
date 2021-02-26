@@ -19,7 +19,7 @@ public class Exercise28 {
             System.out.print(vetorA[i] + " ");
         }
 
-        System.out.println("\nValores do vetor B:");
+        System.out.println("\n\nValores do vetor B:");
 
         for (int i = 0, j = vetorB.length - 1; i < vetorA.length; i++, j--)
         {

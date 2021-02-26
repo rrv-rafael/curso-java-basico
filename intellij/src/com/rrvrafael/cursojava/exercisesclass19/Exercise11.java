@@ -9,7 +9,7 @@ public class Exercise11 {
         Scanner scan = new Scanner(System.in);
 
         int[] vetorA = new int[10];
-        int count = 0;
+        int countPar = 0;
 
         for (int i = 0; i < vetorA.length; i++)
         {
@@ -18,17 +18,17 @@ public class Exercise11 {
 
             if (vetorA[i] % 2 == 0)
             {
-                count++;
+                countPar++;
             }
         }
 
-        if (count > 1)
+        if (countPar > 1)
         {
-            System.out.println("O vetor A tem " + count + " números pares.");
+            System.out.println("O vetor A tem " + countPar + " números pares.");
         }
         else
         {
-            System.out.println("O vetor A tem " + count + " número par.");
+            System.out.println("O vetor A tem " + countPar + " número par.");
         }
     }
 }

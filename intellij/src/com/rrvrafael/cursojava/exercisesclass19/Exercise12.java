@@ -19,6 +19,13 @@ public class Exercise12 {
             soma += vetorA[i];
         }
 
-        System.out.println("Soma dos elementos do vetor A: " + soma);
+        System.out.println("\nValores do vetor A:");
+
+        for (int vetor: vetorA)
+        {
+            System.out.print(vetor + " ");
+        }
+
+        System.out.println("\n\nSoma dos elementos do vetor A: " + soma);
     }
 }

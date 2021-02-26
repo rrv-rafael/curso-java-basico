@@ -23,7 +23,7 @@ public class Exercise34 {
         {
             System.out.println("\n\nRelação de todos os pares de 0 até o elemento " + vetor + ":");
 
-            for (int i = 0; i <= vetor; i++)
+            for (int i = 2; i <= vetor; i++)
             {
                 if (i % 2 == 0)
                 {

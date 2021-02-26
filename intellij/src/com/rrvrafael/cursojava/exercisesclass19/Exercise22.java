@@ -22,17 +22,24 @@ public class Exercise22 {
             }
         }
 
-        System.out.println(countUm + " - " + countZero);
+        System.out.println("Quantidade de número 1: " + countUm);
+        System.out.println("Quantidade de número 0: " + countZero);
 
-        percentUm = ((double) countUm / vetorA.length) * 100;
-        percentZero = ((double) countZero / vetorA.length) * 100;
+        //percentUm = ((double) countUm / vetorA.length) * 100;
+        //percentZero = ((double) countZero / vetorA.length) * 100;
+        percentUm = (double) (countUm * 100) / vetorA.length;
+        percentZero = (double) (countZero * 100) / vetorA.length;
 
-        System.out.println(percentUm + "% dos números são 1.");
-        System.out.println(percentZero + "% dos números são 0.");
+        System.out.println("\nElementos do vetor A:");
 
         for (int vetor: vetorA)
         {
-            System.out.println(vetor);
+            System.out.print(vetor + " ");
         }
+
+        System.out.println("\n\n" + percentUm + "% dos números são 1.");
+        System.out.println(percentZero + "% dos números são 0.");
+
+
     }
 }

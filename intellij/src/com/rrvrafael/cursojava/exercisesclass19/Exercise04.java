@@ -1,5 +1,6 @@
 package com.rrvrafael.cursojava.exercisesclass19;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exercise04 {
@@ -19,9 +20,20 @@ public class Exercise04 {
             vetorB[i] = Math.sqrt(vetorA[i]);
         }
 
+        DecimalFormat formato = new DecimalFormat("###,###.###");
+
+        System.out.println("\nValores do vetor A:");
+
+        for (int vetor: vetorA)
+        {
+            System.out.print(vetor + " ");
+        }
+
+        System.out.println("\n\nValores do vetor B:");
+
         for (double vetor: vetorB)
         {
-            System.out.println("Valores do vetor B: " + vetor);
+            System.out.print(formato.format(vetor) + " ");
         }
     }
 }

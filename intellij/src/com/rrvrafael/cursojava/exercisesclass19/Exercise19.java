@@ -8,30 +8,46 @@ public class Exercise19 {
 
         Scanner scan = new Scanner(System.in);
 
-        double[] nota1 = new double[10];
-        double[] nota2 = new double[10];
-        double[] media = new double[10];
+        double[] notas1 = new double[10];
+        double[] notas2 = new double[10];
+        double[] medias = new double[10];
 
-        for (int i = 0; i < nota1.length; i++)
+        for (int i = 0; i < notas1.length; i++)
         {
             System.out.println("Digite a nota 1:");
-            nota1[i] = scan.nextDouble();
+            notas1[i] = scan.nextDouble();
 
             System.out.println("Digite a nota 2:");
-            nota2[i] = scan.nextDouble();
+            notas2[i] = scan.nextDouble();
 
-            media[i] = (nota1[i] + nota2[i]) / 2;
+            medias[i] = (notas1[i] + notas2[i]) / 2;
         }
 
-        for (int i = 0; i < media.length; i++)
+        System.out.println("\nNotas 1:");
+
+        for (double notas: notas1)
         {
-            if (media[i] >= 7)
+            System.out.print(notas + " ");
+        }
+
+        System.out.println("\n\nNotas 2:");
+
+        for (double notas: notas2)
+        {
+            System.out.print(notas + " ");
+        }
+
+        System.out.println("\n\n");
+
+        for (int i = 0; i < medias.length; i++)
+        {
+            if (medias[i] >= 7)
             {
-                System.out.println("Média: " + (i + 1) + " | " + (media[i]) + " - Aprovado");
+                System.out.println("Média: " + (i + 1) + " | " + (medias[i]) + " - Aprovado");
             }
             else
             {
-                System.out.println("Média: " + (i + 1) + " | " + (media[i]) + " - Reprovado");
+                System.out.println("Média: " + (i + 1) + " | " + (medias[i]) + " - Reprovado");
             }
         }
     }

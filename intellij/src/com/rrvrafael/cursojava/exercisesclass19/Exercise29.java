@@ -27,7 +27,7 @@ public class Exercise29 {
 
         for (int i = 0; i < vetorC.length; i++)
         {
-            if (i < 10)
+            if (i < (vetorC.length / 2))
             {
                 vetorC[i] = vetorA[i];
             }

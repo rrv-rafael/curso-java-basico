@@ -19,9 +19,18 @@ public class Exercise03 {
             vetorB[i] = vetorA[i] * vetorA[i];
         }
 
+        System.out.println("\nValores do vetor A:");
+
+        for (int vetor: vetorA)
+        {
+            System.out.print(vetor + " ");
+        }
+
+        System.out.println("\n\nValores do vetor B:");
+
         for (int vetor: vetorB)
         {
-            System.out.println("Valores do vetor B: " + vetor);
+            System.out.print(vetor + " ");
         }
     }
 }

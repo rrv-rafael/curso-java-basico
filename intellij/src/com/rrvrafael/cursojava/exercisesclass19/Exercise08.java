@@ -24,6 +24,8 @@ public class Exercise08 {
             vetorB[i] = scan.nextInt();
         }
 
+        System.out.println("vetorA * vetorB = vetorC");
+
         for (int i = 0; i < vetorC.length; i++)
         {
             vetorC[i] = vetorA[i] * vetorB[i];

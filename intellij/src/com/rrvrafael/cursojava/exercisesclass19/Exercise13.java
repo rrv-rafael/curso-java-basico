@@ -22,6 +22,13 @@ public class Exercise13 {
             }
         }
 
-        System.out.println("Soma dos elementos do vetor A que são múltiplos de 5: " + soma);
+        System.out.println("\nValores do vetor A:");
+
+        for (int vetor: vetorA)
+        {
+            System.out.print(vetor + " ");
+        }
+
+        System.out.println("\n\nSoma dos elementos do vetor A que são múltiplos de 5: " + soma);
     }
 }

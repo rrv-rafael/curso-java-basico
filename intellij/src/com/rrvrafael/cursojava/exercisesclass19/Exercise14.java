@@ -21,12 +21,19 @@ public class Exercise14 {
             {
                 soma += vetorA[i];
                 countImpar++;
-                System.out.println("vetorA: " + vetorA[i]);
             }
         }
 
         media = (double) soma / countImpar;
 
-        System.out.println("Média dos números ímpares: " + media);
+        System.out.println("\nElementos do vetor A:");
+
+        for (int vetor: vetorA)
+        {
+            System.out.print(vetor + " ");
+        }
+
+        System.out.println("\n\nSoma dos números ímpares: " + soma);
+        System.out.println("\nMédia dos números ímpares: " + media);
     }
 }

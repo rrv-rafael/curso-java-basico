@@ -9,7 +9,7 @@ public class Exercise24 {
         Scanner scan = new Scanner(System.in);
 
         int[] vetorA = new int[10];
-        boolean verificar = true;
+        boolean palindromo = true;
 
         for (int i = 0; i < vetorA.length; i++)
         {
@@ -17,22 +17,29 @@ public class Exercise24 {
             vetorA[i] = scan.nextInt();
         }
 
-        for (int i = 0, j = vetorA.length - 1; i < vetorA.length; i++, j--)
+        for (int i = 0, j = vetorA.length - 1; i < (vetorA.length / 2); i++, j--)
         {
             if (vetorA[i] != vetorA[j])
             {
-                verificar = false;
+                palindromo = false;
                 break;
             }
         }
 
-        if (verificar)
+        System.out.println("\nELementos do vetor A:");
+
+        for (int vetor: vetorA)
         {
-            System.out.println("O vetor A é palíndromo.");
+            System.out.print(vetor + " ");
+        }
+
+        if (palindromo)
+        {
+            System.out.println("\n\nO vetor A é palíndromo.");
         }
         else
         {
-            System.out.println("O vetor A não é palíndromo.");
+            System.out.println("\n\nO vetor A não é palíndromo.");
         }
     }
 }

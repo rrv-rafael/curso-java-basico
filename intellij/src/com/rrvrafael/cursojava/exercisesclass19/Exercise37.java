@@ -5,7 +5,7 @@ public class Exercise37 {
     public static void main(String[] args) {
 
         int[] vetorA = new int[15];
-        double[] vetorB = new double[15];
+        int[] vetorB = new int[15];
 
         System.out.println("Elementos do vetor A:");
 
@@ -15,9 +15,10 @@ public class Exercise37 {
 
             System.out.print(vetorA[i] + " ");
 
-            vetorB[i] = vetorA[i];
+            //vetorB[i] = vetorA[i];
+            vetorB[i] = 1;
 
-            for (int j = 2; j < vetorA[i]; j++)
+            for (int j = 2; j <= vetorA[i]; j++)
             {
                 vetorB[i] *= j;
             }
@@ -25,7 +26,7 @@ public class Exercise37 {
 
         System.out.println("\n\nElementos do vetor B:");
 
-        for (double vetor: vetorB)
+        for (int vetor: vetorB)
         {
             System.out.print(vetor + " ");
         }

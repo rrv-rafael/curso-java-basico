@@ -14,7 +14,7 @@ public class Exercise20 {
         System.out.println("Informe a cotação do dólar (U$) em relação ao real (R$):");
         cotacaoDolar = scan.nextDouble();
 
-        for (int i = 1; i < vetorA.length; i++)
+        for (int i = 1; i <= vetorA.length; i++)
         {
             vetorA[i] = cotacaoDolar * i;
             System.out.println("Valores do vetor A: " + vetorA[i]);

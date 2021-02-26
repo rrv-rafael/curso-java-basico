@@ -47,14 +47,7 @@ public class Exercise26 {
 
         for (int vetor: vetorC)
         {
-            if (vetor < 0)
-            {
-                System.out.println(vetor);
-            }
-            else
-            {
-                System.out.println(" " + vetor);
-            }
+            System.out.print(vetor + " ");
         }
     }
 }

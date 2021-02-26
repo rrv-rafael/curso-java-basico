@@ -41,7 +41,7 @@ public class Exercise27 {
             System.out.print(vetorA[i] + " ");
         }
 
-        System.out.println("\nValores do vetor C:");
+        System.out.println("\n\nValores do vetor C:");
 
         for (char vetor: vetorB)
         {
