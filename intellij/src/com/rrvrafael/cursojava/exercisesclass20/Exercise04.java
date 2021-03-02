@@ -8,25 +8,36 @@ public class Exercise04 {
 
         Scanner scan = new Scanner(System.in);
 
-        String[][] agendaPessoal = new String[5][4];
+        String[][][] agendaPessoal = new String[2][4][1];
 
         for (int i = 0; i < agendaPessoal.length; i++)
         {
-            System.out.println("Digite os horários que deseja agendar para o dia " + (i + 1) + ":");
+            System.out.println("Digite os compromissos que deseja agendar para o dia " + (i + 1));
 
             for (int j = 0; j < agendaPessoal[i].length; j++)
             {
-                agendaPessoal[i][j] = scan.next();
+                System.out.println("Horário disponível: " + (j + 1));
+
+                for (int k = 0; k < agendaPessoal[i][j].length; k++)
+                {
+                    System.out.println("Digite o compromisso:");
+                    agendaPessoal[i][j][k] = scan.next();
+                }
             }
         }
 
         for (int i = 0; i < agendaPessoal.length; i++)
         {
-            System.out.println("\n\nHorários do dia " + (i + 1) + ":");
+            System.out.println("\nCompromissos do dia " + (i + 1) + ":");
 
             for (int j = 0; j < agendaPessoal[i].length; j++)
             {
-                System.out.print(agendaPessoal[i][j] + " ");
+                System.out.println("\nHorário " + (j + 1) + ":");
+
+                for (int k = 0; k < agendaPessoal[i][j].length; k++)
+                {
+                    System.out.print(agendaPessoal[i][j][k] + " ");
+                }
             }
         }
     }
