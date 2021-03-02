@@ -9,8 +9,33 @@ public class Exercise04 {
         Scanner scan = new Scanner(System.in);
 
         String[][] agendaPessoal = new String[2][4];
+        int diaMes, horario;
+        boolean continuar = true;
 
-        for (int i = 0; i < agendaPessoal.length; i++)
+        System.out.println("Menu de opções - Digite de (1 - 30) para indicar o dia do mês e de (1 - 24) para indicar a hora que deseja alterar.");
+        System.out.println("Para sair digite 0 na opção para indicar o mês.");
+
+        do
+        {
+            System.out.println("Digite o dia do mês que deseja alterar:");
+            diaMes = scan.nextInt();
+
+            if (diaMes == 0)
+            {
+                continuar = false;
+            }
+            else
+            {
+                System.out.println("Digite o horário que deseja alterar:");
+                horario = scan.nextInt();
+
+                System.out.println("Agora, informe o compromisso:");
+                agendaPessoal[diaMes][horario] = scan.next();
+            }
+        }
+        while (continuar);
+
+        /*for (int i = 0; i < agendaPessoal.length; i++)
         {
             System.out.println("Digite os compromissos que deseja agendar para o dia " + (i + 1));
 
@@ -33,6 +58,6 @@ public class Exercise04 {
 
                 System.out.print(agendaPessoal[i][j] + " ");
             }
-        }
+        }*/
     }
 }
