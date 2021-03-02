@@ -8,42 +8,25 @@ public class Exercise04 {
 
         Scanner scan = new Scanner(System.in);
 
-        String[][][] agendaPessoal = new String[30][24][];
-        int diaMes;
-        String horario, compromisso;
-
-        System.out.println("Digite o dia:");
-        diaMes = scan.nextInt();
-
-        //agendaPessoal = new String[diaMes][][];
+        String[][] agendaPessoal = new String[5][4];
 
         for (int i = 0; i < agendaPessoal.length; i++)
         {
-            System.out.println("Digite o horário que deseja agendar:");
-            horario = scan.next();
+            System.out.println("Digite os horários que deseja agendar para o dia " + (i + 1) + ":");
 
             for (int j = 0; j < agendaPessoal[i].length; j++)
             {
-
-                for (int k = 0; k < agendaPessoal[i][j].length; k++)
-                {
-                    System.out.println("Digite uma letra:");
-                    agendaPessoal[i][j][k] = scan.next();
-                    //System.out.println(i + " " + j + " " + k);
-                }
+                agendaPessoal[i][j] = scan.next();
             }
         }
 
         for (int i = 0; i < agendaPessoal.length; i++)
         {
+            System.out.println("\n\nHorários do dia " + (i + 1) + ":");
+
             for (int j = 0; j < agendaPessoal[i].length; j++)
             {
-                for (int k = 0; k < agendaPessoal[i][j].length; k++)
-                {
-                    System.out.println("Valores da matriz tridimensional: " + agendaPessoal[i][j][k]);
-                    //agendaPessoal[i][j][k] = scan.next();
-                    //System.out.println(i + " " + j + " " + k);
-                }
+                System.out.print(agendaPessoal[i][j] + " ");
             }
         }
     }
