@@ -8,7 +8,7 @@ public class Exercise04 {
 
         Scanner scan = new Scanner(System.in);
 
-        String[][][] agendaPessoal = new String[2][4][1];
+        String[][] agendaPessoal = new String[2][4];
 
         for (int i = 0; i < agendaPessoal.length; i++)
         {
@@ -18,11 +18,8 @@ public class Exercise04 {
             {
                 System.out.println("Horário disponível: " + (j + 1));
 
-                for (int k = 0; k < agendaPessoal[i][j].length; k++)
-                {
-                    System.out.println("Digite o compromisso:");
-                    agendaPessoal[i][j][k] = scan.next();
-                }
+                System.out.println("Digite o compromisso:");
+                agendaPessoal[i][j] = scan.next();
             }
         }
 
@@ -34,10 +31,7 @@ public class Exercise04 {
             {
                 System.out.println("\nHorário " + (j + 1) + ":");
 
-                for (int k = 0; k < agendaPessoal[i][j].length; k++)
-                {
-                    System.out.print(agendaPessoal[i][j][k] + " ");
-                }
+                System.out.print(agendaPessoal[i][j] + " ");
             }
         }
     }
