@@ -18,12 +18,12 @@ public class Exercise04 {
 
         do
         {
-            System.out.println("\nDigite o dia do mês que deseja alterar:");
+            System.out.println("\nDigite o dia do mês que deseja agendar/alterar:");
             diaMes = scan.nextInt();
 
             if (diaMes > 0)
             {
-                System.out.println("Digite o horário que deseja alterar:");
+                System.out.println("Digite o horário que deseja agendar/alterar:");
                 horario = scan.nextInt();
 
                 System.out.println("\nAgora, informe o compromisso:");
@@ -55,7 +55,7 @@ public class Exercise04 {
                     System.out.println("Digite o dia do mês do compromisso desejado:");
                     diaMes = scan.nextInt();
 
-                    System.out.println("Digite o horário que deseja alterar:");
+                    System.out.println("Digite o horário do compromisso:");
                     horario = scan.nextInt();
 
                     if (agendaPessoal[diaMes - 1][horario - 1] == null)
