@@ -8,59 +8,73 @@ public class Exercise04 {
 
         Scanner scan = new Scanner(System.in);
 
-        String[][] agendaPessoal = new String[2][4];
-        int[] posicaoDia = new int[8];
-        int[] posicaoHorario = new int[8];
-        int diaMes, horario, count = 0;
+        String[][] agendaPessoal = new String[31][24];
+        String mostrarCompromisso;
+        int diaMes, horario;
         boolean continuar = true;
 
-        /*agendaPessoal[0][0] = "a";
-        agendaPessoal[0][1] = "b";
-        agendaPessoal[0][2] = "c";
-        agendaPessoal[0][3] = "d";
-        agendaPessoal[1][0] = "e";
-        agendaPessoal[1][1] = "f";
-        agendaPessoal[1][2] = "g";
-        agendaPessoal[1][3] = "h";*/
-
-        System.out.println("Menu de opções - Digite de (1 - 30) para indicar o dia do mês e de (1 - 24) para indicar a hora que deseja alterar.");
-        System.out.println("Para sair digite -1 na opção para indicar o mês.");
+        System.out.println("Para agendar ou alterar um compromisso, digite de (1 - 31) para indicar o dia do mês e de (1 - 24) para indicar o horário!");
+        System.out.println("\nPara sair da aplicação digite -1 na opção para indicar o mês e para ver a agenda digite 0.");
 
         do
         {
-            System.out.println("Digite o dia do mês que deseja alterar:");
+            System.out.println("\nDigite o dia do mês que deseja alterar:");
             diaMes = scan.nextInt();
 
-            if (diaMes >= 0)
+            if (diaMes > 0)
             {
                 System.out.println("Digite o horário que deseja alterar:");
                 horario = scan.nextInt();
 
-                posicaoDia[count] = diaMes;
-                posicaoHorario[count] = horario;
-                count++;
+                System.out.println("\nAgora, informe o compromisso:");
+                agendaPessoal[diaMes - 1][horario - 1] = scan.next();
+            }
+            else if (diaMes == 0)
+            {
+                System.out.println("\nPara listar todos os compromissos digite S - SIM e para listar um compromisso específico digite N - NÃO:");
+                mostrarCompromisso = scan.next();
+                System.out.println();
 
-                System.out.println("Agora, informe o compromisso:");
-                agendaPessoal[diaMes][horario] = scan.next();
+                if (mostrarCompromisso.equalsIgnoreCase("s"))
+                {
+                    for (int i = 0; i < agendaPessoal.length; i++)
+                    {
+                        for (int j = 0; j < agendaPessoal[i].length; j++)
+                        {
+                            if (agendaPessoal[i][j] != null)
+                            {
+                                System.out.println("Compromisso no dia " + (i + 1) + " às " + (j + 1) + ":");
+                                System.out.println(agendaPessoal[i][j]);
+                                System.out.println();
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    System.out.println("Digite o dia do mês do compromisso desejado:");
+                    diaMes = scan.nextInt();
+
+                    System.out.println("Digite o horário que deseja alterar:");
+                    horario = scan.nextInt();
+
+                    if (agendaPessoal[diaMes - 1][horario - 1] == null)
+                    {
+                        System.out.println("\nNão existe compromisso para esse dia e horário informados.");
+                    }
+                    else
+                    {
+                        System.out.println("\nCompromisso no dia " + diaMes + " às " + horario + ":");
+                        System.out.println(agendaPessoal[diaMes - 1][horario - 1]);
+                    }
+                }
             }
             else
             {
+                System.out.println("\n\nVocê saiu da aplicação...");
                 continuar = false;
             }
         }
         while (continuar);
-
-        for (int i = 0; i < agendaPessoal.length; i++)
-        {
-            System.out.println("Compromissos do dia " + posicaoDia[i] + " :");
-
-            for (int j = 0; j < agendaPessoal[i].length; j++)
-            {
-                if (agendaPessoal[i][j] != null)
-                {
-                    System.out.println(agendaPessoal[i][j]);
-                }
-            }
-        }
     }
 }
