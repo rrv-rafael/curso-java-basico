@@ -9,20 +9,19 @@ public class Exercise06 {
         Scanner scan = new Scanner(System.in);
 
         String[][] jogoVelha = new String[3][3];
-        String jogador1 = "", jogador2 = "";
-        int posicoes = 0, count = 0;
-        int countO = 0, countX = 0, countDP, countDPX, countDS, countDSX, countLinhaO, countLinhaX, countColunaO, countColunaX;
+        String jogadorUm = "", jogadorDois = "";
+        int posicao = 0, count = 0, countO, countX, countDPO, countDPX, countDSO, countDSX, countLO = 0, countLX = 0, countCO = 0, countCX = 0;
         boolean continuar = true;
         boolean jogada = true;
 
-        System.out.println("Exemplo de posições para sua escolha:\n");
+        System.out.println("Posições disponíveis para escolher:\n");
 
         for (int i = 0; i < jogoVelha.length; i++)
         {
             for (int j = 0; j < jogoVelha[i].length; j++)
             {
-                posicoes++;
-                jogoVelha[i][j] = Integer.toString(posicoes);
+                posicao++;
+                jogoVelha[i][j] = Integer.toString(posicao);
 
                 System.out.print(jogoVelha[i][j] + " ");
             }
@@ -34,118 +33,85 @@ public class Exercise06 {
         {
             if (jogada)
             {
-                System.out.println("\nJogador 1! Digite a posição onde deseja colocar a O:");
-                jogador1 = scan.next();
-                jogada = false;
-
+                System.out.println("\nJogador 1! Informe a posição que deseja colocar a O.");
+                jogadorUm = scan.next();
             }
             else
             {
-                System.out.println("\nJogador 2! Digite a posição onde deseja colocar a X:");
-                jogador2 = scan.next();
-                jogada = true;
-
+                System.out.println("\nJogador 2! Informe a posição que deseja colocar o X.");
+                jogadorDois = scan.next();
             }
 
-            countDP = 0;
-            countDS = 0;
+            System.out.println("\nPosições disponíveis para escolher:\n");
+
+            count++;
+
+            countDPO = 0;
+            countDPX = 0;
+            countDSO = 0;
+            countDSX = 0;
 
             for (int i = 0; i < jogoVelha.length; i++)
             {
-                countLinhaO = 0;
-                countLinhaX = 0;
-                countColunaO = 0;
-                countColunaX = 0;
+                countO = 0;
+                countX = 0;
 
                 for (int j = 0; j < jogoVelha[i].length; j++)
                 {
-                    if (!jogada)
+                    if (jogada)
                     {
-                        if (jogador1.equals(jogoVelha[i][j]))
+                        if (jogadorUm.equals(jogoVelha[i][j]))
                         {
                             jogoVelha[i][j] = "O";
+                            jogada = false;
                         }
                     }
                     else
                     {
-                        if (jogador2.equals(jogoVelha[i][j]))
+                        if (jogadorDois.equals(jogoVelha[i][j]))
                         {
                             jogoVelha[i][j] = "X";
+                            jogada = true;
                         }
                     }
 
                     System.out.print(jogoVelha[i][j] + " ");
 
-                    if (i == j)
+                    if (count > 4)
                     {
                         if (jogoVelha[i][j].equals("O"))
                         {
-                            countDP++;
-                            countO = countDP;
+                            countO++;
+                            countLO = countO;
                         }
                         else if (jogoVelha[i][j].equals("X"))
                         {
-                            countDP++;
-                            countX = countDP;
+                            countX++;
+                            countLX = countX;
                         }
-                    }
-                    else if ((i + j) == (jogoVelha.length - 1))
-                    {
-                        if (jogoVelha[i][j].equals("O"))
+
+                        if (i == j)
                         {
-                            countDS++;
-                            countO = countDS;
+                            if (jogoVelha[i][j].equals("O"))
+                            {
+                                countDPO++;
+                            }
+                            else if (jogoVelha[i][j].equals("X"))
+                            {
+                                countDPX++;
+                            }
                         }
-                        else if (jogoVelha[i][j].equals("X"))
+
+                        if ((i + j) == (jogoVelha.length - 1))
                         {
-                            countDS++;
-                            countX = countDS;
-                        }
-                    }
-
-
-
-                    if (jogoVelha[i][j].equals("O"))
-                    {
-                        countLinhaO++;
-
-                        if (countLinhaO == 3)
-                        {
-                            System.out.println("aloha");
-                            countO = countLinhaO;
-                            break;
-                        }
-                    }
-                    else if (jogoVelha[i][j].equals("X"))
-                    {
-                        countLinhaX++;
-
-                        if (countLinhaX == 3)
-                        {
-                            System.out.println("alohinha");
-                            countX = countLinhaX;
-                            break;
-                        }
-                    }
-                    else if (jogoVelha[j][i].equals("O"))
-                    {
-                        countColunaO++;
-
-                        if (countColunaO == 3)
-                        {
-                            System.out.println("olá");
-                            countO = countColunaO;
-                            break;
-                        }
-                    }
-                    else if (jogoVelha[j][i].equals("X"))
-                    {
-                        countColunaX++;
-
-                        if (countColunaX == 3)
-                        {
-                            countX = countColunaX;
-                            break;
+                            if (jogoVelha[i][j].equals("O"))
+                            {
+                                countDSO++;
+                            }
+                            else if (jogoVelha[i][j].equals("X"))
+                            {
+                                countDSX++;
+                            }
                         }
                     }
                 }
@@ -153,45 +119,84 @@ public class Exercise06 {
                 System.out.println();
             }
 
-            count++;
+            if (count > 4)
+            {
+                if (countLO == 3)
+                {
+                    System.out.println("\nJogador 1 ganhou!");
+                    break;
+                }
+                else if (countLX == 3)
+                {
+                    System.out.println("\nJogador 2 ganhou!");
+                    break;
+                }
+                else if (countDPO == 3)
+                {
+                    System.out.println("\nJogador 1 ganhou!");
+                    break;
+                }
+                else if (countDPX == 3)
+                {
+                    System.out.println("\nJogador 2 ganhou!");
+                    break;
+                }
+                else if (countDSO == 3)
+                {
+                    System.out.println("\nJogador 1 ganhou!");
+                    break;
+                }
+                else if (countDSX == 3)
+                {
+                    System.out.println("\nJogador 2 ganhou!");
+                    break;
+                }
 
-            if (countO == 3)
-            {
-                System.out.println("\nO jogador 1 venceu!");
-                break;
-            }
-            else if (countX == 3)
-            {
-                System.out.println("\nO jogador 2 venceu!");
-                break;
+                for (int i = 0; i < jogoVelha.length; i++)
+                {
+                    if (countCO == 3)
+                    {
+                        break;
+                    }
+                    else if (countCX == 3)
+                    {
+                        break;
+                    }
+
+                    countCO = 0;
+                    countCX = 0;
+
+                    for (int j = 0; j < jogoVelha[i].length; j++)
+                    {
+                        if (jogoVelha[j][i].equals("O"))
+                        {
+                            countCO++;
+                        }
+                        else if (jogoVelha[j][i].equals("X"))
+                        {
+                            countCX++;
+                        }
+                    }
+                }
+
+                if (countCO == 3)
+                {
+                    System.out.println("\nJogador 1 ganhou!");
+                    break;
+                }
+                else if (countCX == 3)
+                {
+                    System.out.println("\nJogador 2 ganhou!");
+                    break;
+                }
             }
 
             if (count == 8)
             {
-                System.out.println("\nEmpate!");
+                System.out.println("\nEmpate...");
                 continuar = false;
             }
-
         }
         while (continuar);
-
-        /*for (int i = 0; i < jogoVelha.length; i++)
-        {
-            for (int j = 0; j < jogoVelha[i].length; j++)
-            {
-                System.out.print(jogoVelha[j][i] + " ");
-            }
-
-            System.out.println();
-        }*/
     }
-
-
-        /*
-        *   0 1 2
-        * 0 1 2 3
-        * 1 4 5 6
-        * 2 7 8 9
-        *
-        * */
 }
