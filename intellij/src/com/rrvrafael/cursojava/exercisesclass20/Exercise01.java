@@ -6,7 +6,7 @@ public class Exercise01 {
 
     public static void main(String[] args) {
 
-        Random random = new Random();
+        Random numberRandom = new Random();
 
         int[][] matriz = new int[4][4];
         int maior;
@@ -18,7 +18,7 @@ public class Exercise01 {
         {
             for (int j = 0; j < matriz[i].length; j++)
             {
-                matriz[i][j] = random.nextInt(10);
+                matriz[i][j] = numberRandom.nextInt(10);
                 System.out.print(matriz[i][j] + " ");
             }
             System.out.println();
@@ -35,23 +35,11 @@ public class Exercise01 {
                     maior = matriz[i][j];
                     linha = i;
                     coluna = j;
-
                 }
             }
         }
 
-        System.out.println("\n\nMaior número da matriz é: " + maior);
-        System.out.println("Posição deste número: \nLinha: " + linha + " | Coluna: " + coluna);
-
-        /*for (int[] matrizI : matriz)
-        {
-            for (int matrizJ : matrizI)
-            {
-                if (matrizJ > maior)
-                {
-                    maior = matrizJ;
-                }
-            }
-        }*/
+        System.out.println("\nMaior número da matriz é: " + maior);
+        System.out.println("\nPosição deste número: \nLinha: " + linha + " | Coluna: " + coluna);
     }
 }

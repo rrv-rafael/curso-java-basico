@@ -8,17 +8,17 @@ public class Exercise03 {
 
         Scanner scan = new Scanner(System.in);
 
-        int[][] matriz = new int[3][3];
+        int[][] numeros = new int[3][3];
         int countPar = 0, countImpar = 0;
 
-        for (int i = 0; i < matriz.length; i++)
+        for (int i = 0; i < numeros.length; i++)
         {
-            for (int j = 0; j < matriz[i].length; j++)
+            for (int j = 0; j < numeros[i].length; j++)
             {
                 System.out.println("Digite um valor para a matriz:");
-                matriz[i][j] = scan.nextInt();
+                numeros[i][j] = scan.nextInt();
 
-                if (matriz[i][j] % 2 == 0)
+                if (numeros[i][j] % 2 == 0)
                 {
                     countPar++;
                 }
@@ -29,7 +29,9 @@ public class Exercise03 {
             }
         }
 
-        for (int[] matrizI : matriz)
+        System.out.println();
+
+        for (int[] matrizI : numeros)
         {
             for (int matrizJ : matrizI)
             {
