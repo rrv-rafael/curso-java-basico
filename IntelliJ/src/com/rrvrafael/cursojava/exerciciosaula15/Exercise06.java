@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula15;
+package com.rrvrafael.cursojava.redoneexercisesaula15;
 
 import java.util.Scanner;
 
@@ -8,26 +8,38 @@ public class Exercise06 {
 
         Scanner scan = new Scanner(System.in);
 
-        double n1, n2, n3, maior;
+        int n1, n2, n3, maior;
 
-        System.out.println("Digite o 1o valor:");
-        n1 = scan.nextDouble();
-        System.out.println("Digite o 2o valor:");
-        n2 = scan.nextDouble();
-        System.out.println("Digite o 3o valor:");
-        n3 = scan.nextDouble();
+        System.out.println("Informe o 1o número:");
+        n1 = scan.nextInt();
+        System.out.println("Informe o 2o número:");
+        n2 = scan.nextInt();
+        System.out.println("Informe o 3o número:");
+        n3 = scan.nextInt();
 
-        if (n1 > n2 && n1 > n3)
+        maior = n1;
+
+        if (n2 > maior)
         {
-            System.out.println(n1 + " é o maior número digitado!");
+            maior = n2;
+        }
+        if (n3 > maior)
+        {
+            maior = n3;
+        }
+        System.out.println(maior + " é o maior número digitado!");
+
+        /*if (n1 > n2 && n1 > n3)
+        {
+            System.out.println("O número " + n1 + " é o maior número informado.");
         }
         else if (n2 > n1 && n2 > n3)
         {
-            System.out.println(n2 + " é o maior número digitado!");
+            System.out.println("O número " + n2 + " é o maior número informado.");
         }
         else
         {
-            System.out.println(n3 + " é o maior número digitado!");
-        }
+            System.out.println("O número " + n3 + " é o maior número informado.");
+        }*/
     }
 }

@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula15;
+package com.rrvrafael.cursojava.redoneexercisesaula15;
 
 import java.util.Scanner;
 
@@ -8,45 +8,45 @@ public class Exercise12 {
 
         Scanner scan = new Scanner(System.in);
 
-        double salarioBruto, salarioLiquido, ir, fgts, inss, valorHora, qtdHoraMes, totalDescontos;
-        int percentual;
+        double valorHoras, salarioBruto, descontoIR, sindicato, inss, fgts, salarioLiquido;
+        int qtdHorasTrabMes;
 
-        System.out.println("Digite o quanto você ganha por hora:");
-        valorHora = scan.nextDouble();
+        System.out.println("Informe o quanto você recebe por hora:");
+        valorHoras = scan.nextDouble();
+        System.out.println("Informe a quantidade de horas trabalhadas no mês:");
+        qtdHorasTrabMes = scan.nextInt();
 
-        System.out.println("Digite a quantidade de horas trabalhadas no mês:");
-        qtdHoraMes = scan.nextDouble();
-
-        salarioBruto = valorHora * qtdHoraMes;
+        salarioBruto = valorHoras * qtdHorasTrabMes;
 
         if (salarioBruto <= 900)
         {
-            percentual = 0;
+            descontoIR = 0;
         }
         else if (salarioBruto > 900 && salarioBruto <= 1500)
         {
-            percentual = 5;
+            descontoIR = salarioBruto * 0.05;
         }
         else if (salarioBruto > 1500 && salarioBruto <= 2500)
         {
-            percentual = 10;
+            descontoIR = salarioBruto * 0.1;
         }
         else
         {
-            percentual = 20;
+            descontoIR = salarioBruto * 0.2;
         }
 
-        ir = (salarioBruto / 100) * percentual;
+        sindicato = salarioBruto * 0.03;
         inss = salarioBruto * 0.1;
         fgts = salarioBruto * 0.11;
-        totalDescontos = (ir + inss);
-        salarioLiquido = salarioBruto - totalDescontos;
 
-        System.out.println("Salário bruto: R$" + salarioBruto);
-        System.out.println("(-) IR (" + percentual + "%): R$" + ir);
-        System.out.println("(-) INSS (10%): R$" + inss);
-        System.out.println("FGTS (11%): R$" + fgts);
-        System.out.println("Total de descontos: R$" + totalDescontos);
-        System.out.println("Salário Líquido: R$" + salarioLiquido);
+        salarioLiquido = salarioBruto - (descontoIR + sindicato + inss);
+
+        System.out.println("Salário bruto: (" + valorHoras + " * " + qtdHorasTrabMes + ")\t\t\t: R$ " + salarioBruto);
+        System.out.println("(-) IR (" + (int)((descontoIR / salarioBruto) * 100) + "%) \t\t\t\t\t\t" + ": R$ " + descontoIR);
+        System.out.println("(-) Sindicato (3%)" +  "\t\t\t\t\t" + ": R$ " + sindicato);
+        System.out.println("(-) INSS (10%)" + "\t\t\t\t\t\t" + ": R$ " + inss);
+        System.out.println("FGTS (11%)" + "\t\t\t\t\t\t\t" + ": R$ " + fgts);
+        System.out.println("Total de descontos" + "\t\t\t\t\t: R$ " + (descontoIR + sindicato + inss));
+        System.out.println("Salário Liquido" + "\t\t\t\t\t\t: R$ " + salarioLiquido);
     }
 }

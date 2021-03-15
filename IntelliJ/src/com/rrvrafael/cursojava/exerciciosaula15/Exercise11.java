@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula15;
+package com.rrvrafael.cursojava.redoneexercisesaula15;
 
 import java.util.Scanner;
 
@@ -8,40 +8,33 @@ public class Exercise11 {
 
         Scanner scan = new Scanner(System.in);
 
-        double salAtual, salReajuste, reajuste;
-        String percentual;
+        double salario, reajuste, novoSalario;
 
-        System.out.println("Digite o seu salário atual:");
-        salAtual = scan.nextDouble();
+        System.out.println("Informe o salário atual:");
+        salario = scan.nextDouble();
 
-        if (salAtual < 281)
+        if (salario <= 280)
         {
-            reajuste = salAtual * 0.2;
-            salReajuste = salAtual + reajuste;
-            percentual = "20%";
+            reajuste = 0.2;
         }
-        else if (salAtual > 280 && salAtual < 701)
+        else if (salario > 280 && salario <= 700)
         {
-            reajuste = salAtual * 0.15;
-            salReajuste = salAtual + reajuste;
-            percentual = "15%";
+            reajuste = 0.15;
         }
-        else if (salAtual > 700 && salAtual < 1501)
+        else if (salario > 700 && salario <= 1500)
         {
-            reajuste = salAtual * 0.1;
-            salReajuste = salAtual + reajuste;
-            percentual = "10%";
+            reajuste = 0.1;
         }
         else
         {
-            reajuste = salAtual * 0.05;
-            salReajuste = salAtual + reajuste;
-            percentual = "5%";
+            reajuste = 0.05;
         }
 
-        System.out.println("Salário antes do reajuste: " + salAtual);
-        System.out.println("Percentual de aumento aplicado: " + percentual);
-        System.out.println("Valor do aumento: " + reajuste);
-        System.out.println("Salário com o reajuste: " + salReajuste);
+        novoSalario = salario + (salario * reajuste);
+
+        System.out.println("Salário antes do reajuste: R$" + salario);
+        System.out.println("Percentual de aumento aplicado: " + ((int)(reajuste * 100)) + "%");
+        System.out.println("Valor do aumento: R$" + (salario * reajuste));
+        System.out.println("Novo salário após o aumento: R$" + novoSalario);
     }
 }

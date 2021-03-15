@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula15;
+package com.rrvrafael.cursojava.redoneexercisesaula15;
 
 import java.util.Scanner;
 
@@ -11,47 +11,40 @@ public class Exercise04 {
         String letra;
 
         System.out.println("Digite uma letra:");
-        letra = scan.next();
+        letra = scan.nextLine();
 
-        if (letra.length() > 1)
+        /*if (letra.equalsIgnoreCase("A") || letra.equalsIgnoreCase("E") || letra.equalsIgnoreCase("I") || letra.equalsIgnoreCase("O") || letra.equalsIgnoreCase("U"))
         {
-            System.out.println("Digite apenas uma letra!");
+            System.out.println("Você digitou uma vogal!");
         }
         else
         {
-            switch (letra)
-            {
-                case "a":
-                case "e":
-                case "i":
-                case "o":
-                case "u":
+            System.out.println("Você digitou uma consoante!");
+        }*/
+
+        if (letra.length() == 1)
+        {
+            switch (letra) {
                 case "A":
+                case "a":
                 case "E":
+                case "e":
                 case "I":
+                case "i":
                 case "O":
+                case "o":
                 case "U":
-                    System.out.println("A letra digitada é uma vogal!");
+                case "u":
+                    System.out.println("Você digitou uma vogal!");
                     break;
                 default:
-                    System.out.println("A letra digitada é uma consoante!");
+                    System.out.println("Você digitou uma consoante!");
+                    break;
             }
-        }
-
-        if (letra.length() > 1)
-        {
-            System.out.println("Digite apenas uma letra!");
         }
         else
         {
-            if (letra.equalsIgnoreCase("a") || letra.equalsIgnoreCase("e") || letra.equalsIgnoreCase("i") || letra.equalsIgnoreCase("o") || letra.equalsIgnoreCase("u"))
-            {
-                System.out.println("A letra digitada é uma vogal!");
-            }
-            else
-            {
-                System.out.println("A letra digitada é uma consoante!");
-            }
+            System.out.println("Você não digitou apenas uma letra!");
         }
     }
 }

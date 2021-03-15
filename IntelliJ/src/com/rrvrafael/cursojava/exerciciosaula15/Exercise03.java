@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula15;
+package com.rrvrafael.cursojava.redoneexercisesaula15;
 
 import java.util.Scanner;
 
@@ -15,11 +15,11 @@ public class Exercise03 {
 
         if (letra.equalsIgnoreCase("F"))
         {
-            System.out.println("F - Feminino");
+            System.out.println("F - Feminino.");
         }
         else if (letra.equalsIgnoreCase("M"))
         {
-            System.out.println("M - Masculino");
+            System.out.println("M - Masculino.");
         }
         else
         {

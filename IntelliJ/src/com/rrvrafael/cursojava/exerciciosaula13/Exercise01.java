@@ -1,9 +1,8 @@
-package com.rrvrafael.cursojava.exerciciosaula13;
+package com.rrvrafael.cursojava.redoneexercisesaula13;
 
 public class Exercise01 {
-
     public static void main(String[] args) {
 
-        System.out.println("Alo Mundo!");
+        System.out.println("Alô Mundo!");
     }
 }

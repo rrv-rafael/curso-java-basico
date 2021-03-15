@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula15;
+package com.rrvrafael.cursojava.redoneexercisesaula15;
 
 import java.util.Scanner;
 
@@ -10,25 +10,25 @@ public class Exercise10 {
 
         String turno;
 
-        System.out.println("Digite o turno que você estuda (M-Matutino | V-Vespertino | N-Noturno):");
+        System.out.println("Em que turno você estuda? Digite M p/ Matutino, V p/ Vespertino e N p/ Noturno.");
         turno = scan.nextLine();
 
         switch (turno)
         {
             case "M":
             case "m":
-                System.out.println("Bom dia!");
+                System.out.println("Bom Dia!");
                 break;
             case "V":
             case "v":
-                System.out.println("Boa tarde!");
+                System.out.println("Boa Tarde!");
                 break;
             case "N":
             case "n":
-                System.out.println("Boa noite!");
+                System.out.println("Boa Noite!");
                 break;
             default:
-                System.out.println("O turno digitado é inválido!");
+                System.out.println("Valor Inválido!");
         }
     }
 }

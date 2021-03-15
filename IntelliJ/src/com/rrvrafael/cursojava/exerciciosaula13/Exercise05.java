@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula13;
+package com.rrvrafael.cursojava.redoneexercisesaula13;
 
 import java.util.Scanner;
 
@@ -8,13 +8,20 @@ public class Exercise05 {
 
         Scanner scan = new Scanner(System.in);
 
-        double centimetro, metro;
+        int metro, cm;
 
-        System.out.println("Digite a metragem a ser convertida: ");
-        metro = scan.nextDouble();
+        System.out.println("Digite a metragem:");
+        metro = scan.nextInt();
 
-        centimetro = metro * 100;
+        cm = metro * 100;
 
-        System.out.println("A quantidade de metros equivale a " + centimetro + " centimentros.");
+        if (metro > 1)
+        {
+            System.out.println(metro + " metros equivalem à " + cm + " centímetros");
+        }
+        else
+        {
+            System.out.println(metro + " metro equivale à " + cm + " centímetros");
+        }
     }
 }

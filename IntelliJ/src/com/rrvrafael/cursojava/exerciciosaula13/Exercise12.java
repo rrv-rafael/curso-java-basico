@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula13;
+package com.rrvrafael.cursojava.redoneexercisesaula13;
 
 import java.util.Scanner;
 
@@ -10,11 +10,11 @@ public class Exercise12 {
 
         double altura, pesoIdeal;
 
-        System.out.println("Digite a sua altura: ");
+        System.out.println("Digite a sua altura:");
         altura = scan.nextDouble();
 
         pesoIdeal = (72.7 * altura) - 58;
 
-        System.out.println("De acordo com sua altura, seu peso ideal é: " + pesoIdeal);
+        System.out.println("Seu peso ideal é: " + pesoIdeal);
     }
 }

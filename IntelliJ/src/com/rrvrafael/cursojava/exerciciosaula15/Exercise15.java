@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula15;
+package com.rrvrafael.cursojava.redoneexercisesaula15;
 
 import java.util.Scanner;
 
@@ -10,33 +10,31 @@ public class Exercise15 {
 
         int lado1, lado2, lado3;
 
-        System.out.println("Digite o valor do 1o lado:");
+        System.out.println("Digite o Lado 1:");
         lado1 = scan.nextInt();
-
-        System.out.println("Digite o valor do 2o lado:");
+        System.out.println("Digite o Lado 2:");
         lado2 = scan.nextInt();
-
-        System.out.println("Digite o valor do 3o lado:");
+        System.out.println("Digite o Lado 3:");
         lado3 = scan.nextInt();
 
-        if (lado1 + lado2 > lado3 && lado2 + lado3 > lado1 && lado1 + lado3 > lado2)
+        if (lado1 + lado2 > lado3 || lado1 + lado3 > lado2 || lado2 + lado3 > lado1)
         {
             if (lado1 == lado2 && lado2 == lado3)
             {
-                System.out.println("Triângulo Equilátero");
+                System.out.println("Triângulo Equilátero!");
             }
-            else if (lado1 != lado2 && lado2 != lado3)
+            else if (lado1 != lado2 && lado1 != lado3 && lado2 != lado3)
             {
-                System.out.println("Triângulo Escaleno");
+                System.out.println("Triângulo Escaleno!");
             }
             else
             {
-                System.out.println("Triângulo Isósceles");
+                System.out.println("Triângulo Isósceles!");
             }
         }
         else
         {
-            System.out.println("Os valores digitados não formam um trângulo");
+            System.out.println("Os lados informados não formam um trinângulo!");
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula15;
+package com.rrvrafael.cursojava.redoneexercisesaula15;
 
 import java.util.Scanner;
 
@@ -8,41 +8,51 @@ public class Exercise22 {
 
         Scanner scan = new Scanner(System.in);
 
-        double qtdMorango, qtdMaca, qtdTotal, valorMorango, valorMaca, valorTotal, valorDesconto;
+        int qtdMorango, qtdMaca;
+        double valorPagar, precoMaca, precoMorango, valorTotalDesc;
 
-        System.out.println("Digite a quantidade adquirida de morango em kg:");
-        qtdMorango = scan.nextDouble();
-        System.out.println("Digite a quantidade adquirida de maçã em kg:");
-        qtdMaca = scan.nextDouble();
+        System.out.println("Informe a quantidade (em Kg) de morangos:");
+        qtdMorango = scan.nextInt();
+        System.out.println("Informe a quantidade (em Kg) de maçãs:");
+        qtdMaca = scan.nextInt();
 
-        if (qtdMorango <= 5)
+        if (qtdMorango <= 5 && qtdMaca <= 5)
         {
-            valorMorango = qtdMorango * 2.5;
+            precoMorango = 2.5;
+            precoMaca = 1.8;
+        }
+        else if (qtdMorango > 5 && qtdMaca > 5)
+        {
+            precoMorango = 2.2;
+            precoMaca = 1.5;
+        }
+        else if (qtdMorango > 5 && qtdMaca <=5)
+        {
+            precoMorango = 2.2;
+            precoMaca = 1.8;
         }
         else
         {
-            valorMorango = qtdMorango * 2.2;
-        }
-        if (qtdMaca <= 5)
-        {
-            valorMaca = qtdMaca * 1.8;
-        }
-        else
-        {
-            valorMaca = qtdMaca * 1.5;
+            precoMorango = 2.5;
+            precoMaca = 1.5;
         }
 
-        qtdTotal = qtdMorango + qtdMaca;
-        valorTotal = valorMorango + valorMaca;
+        valorPagar = (qtdMorango * precoMorango) + (qtdMaca * precoMaca);
 
-        if (qtdTotal > 8 || valorTotal > 25)
+        if (qtdMorango + qtdMaca > 8 || valorPagar > 25)
         {
-            valorDesconto = valorTotal - (valorTotal * 0.1);
-            System.out.println("Valor a ser pago com desconto: " + valorDesconto);
+            valorPagar = valorPagar - (valorPagar * 0.1);
+            System.out.println("Entrou aqui");
+            //System.out.println("Preço pago pelo Morango: " + precoMorango);
+            //System.out.println("Preço pago pela Maçã: " + precoMaca);
+            //System.out.println("Valor total a pagar com desconto de 10%: " + valorPagar);
         }
-        else
+        /*else
         {
-            System.out.println("Valor a ser pago: " + valorTotal);
-        }
+            System.out.println("Preço pago pelo Morango: " + precoMorango);
+            System.out.println("Preço pago pela Maçã: " + precoMaca);
+            System.out.println("Valor total a pagar: " + valorPagar);
+        }*/
+        System.out.println("Valor total a pagar: " + valorPagar);
     }
 }

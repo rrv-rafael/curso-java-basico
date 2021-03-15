@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula13;
+package com.rrvrafael.cursojava.redoneexercisesaula13;
 
 import java.util.Scanner;
 
@@ -8,22 +8,23 @@ public class Exercise11 {
 
         Scanner scan = new Scanner(System.in);
 
-        int n1, n2;
-        double produto, numReal, soma, numAoCubo;
+        double numReal, soma, produto;
+        int num1, num2;
 
-        System.out.println("Digite o 1o número inteiro: ");
-        n1 = scan.nextInt();
-        System.out.println("Digite o 2o número inteiro: ");
-        n2 = scan.nextInt();
-        System.out.println("Digite o número real: ");
+        System.out.println("Digite o 1o número inteiro:");
+        num1 = scan.nextInt();
+
+        System.out.println("Digite o 2o número inteiro:");
+        num2 = scan.nextInt();
+
+        System.out.println("Digite um número real: ");
         numReal = scan.nextDouble();
 
-        produto = (n1 * 2) * ((double)n2 / 2); //O double antes do n2 serve para converter o resultado da divisão de 2 números inteiros em um número real
-        soma = (n1 * 3) + numReal;
-        numAoCubo = Math.pow(numReal,3);
+        produto = (num1 * 2) * ((double)num2 / 2);
+        soma = (num1 * 3) + numReal;
 
-        System.out.println("Produto do n1 com o n2: " + produto);
-        System.out.println("Soma do triplo do primeiro número com o terceiro: " + soma);
-        System.out.println("Terceiro número elevado ao cubo: " + numAoCubo);
+        System.out.println("Produto do dobro do primeiro com metade do segundo: " + produto);
+        System.out.println("Soma do triplo do primeiro com o terceiro: " + soma);
+        System.out.println("Terceiro elevado ao cubo " + Math.pow(numReal, 3));
     }
 }

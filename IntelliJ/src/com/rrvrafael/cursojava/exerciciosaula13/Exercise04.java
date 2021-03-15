@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula13;
+package com.rrvrafael.cursojava.redoneexercisesaula13;
 
 import java.util.Scanner;
 
@@ -10,20 +10,20 @@ public class Exercise04 {
 
         double nota1, nota2, nota3, nota4, media;
 
-        System.out.println("Digite a 1a nota: ");
+        System.out.println("Digite a nota do 1o Bimestre:");
         nota1 = scan.nextDouble();
 
-        System.out.println("Digite a 2a nota: ");
+        System.out.println("Digite a nota do 2o Bimestre:");
         nota2 = scan.nextDouble();
 
-        System.out.println("Digite a 3a nota: ");
+        System.out.println("Digite a nota do 3o Bimestre:");
         nota3 = scan.nextDouble();
 
-        System.out.println("Digite a 4a nota: ");
+        System.out.println("Digite a nota do 4o Bimestre:");
         nota4 = scan.nextDouble();
 
         media = (nota1 + nota2 + nota3 + nota4) / 4;
 
-        System.out.println("Média Bimestral: " + media);
+        System.out.println("Média: " + media);
     }
 }

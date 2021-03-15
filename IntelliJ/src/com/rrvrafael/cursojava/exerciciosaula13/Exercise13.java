@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula13;
+package com.rrvrafael.cursojava.redoneexercisesaula13;
 
 import java.util.Scanner;
 
@@ -8,25 +8,19 @@ public class Exercise13 {
 
         Scanner scan = new Scanner(System.in);
 
-        double ganhoPorHora, numeroHorasTrabalhadas, salarioBruto, valorInss, pgmtSindicato, ir, totalImpostos, salLiquido;
+        double ganhoPorHora, numHorasTrabMes, salarioBruto, salarioLiquido;
 
-        System.out.println("Digite o quanto você ganha por hora: ");
+        System.out.println("Informe o quanto você ganha por hora:");
         ganhoPorHora = scan.nextDouble();
-        System.out.println("Digite a quantidade de horas trabalhadas: ");
-        numeroHorasTrabalhadas = scan.nextDouble();
 
-        salarioBruto = ganhoPorHora * numeroHorasTrabalhadas;
-        valorInss = salarioBruto * 0.08;
-        pgmtSindicato = salarioBruto * 0.05;
-        ir = salarioBruto * 0.11;
-        totalImpostos = valorInss + pgmtSindicato + ir;
-        salLiquido = salarioBruto - totalImpostos;
+        System.out.println("Informe o número de horas trabalhadas no mês:");
+        numHorasTrabMes = scan.nextDouble();
 
-        System.out.println("Salário bruto: R$" + salarioBruto);
-        System.out.println("Valor do INSS: R$" + valorInss);
-        System.out.println("Pagamento ao sindicato: R$" + pgmtSindicato);
-        System.out.println("Pagamento do Imposto de Renda: R$" + ir);
-        System.out.println("Total dos impostos: R$" + totalImpostos);
-        System.out.println("Salário líquido: R$" + salLiquido);
+        salarioBruto = ganhoPorHora * numHorasTrabMes;
+
+        System.out.println("+ Salário Bruto: R$" + salarioBruto + '\n' + "- IR (11%): R$" + (salarioBruto * 0.11));
+        System.out.println("- INSS (8%): R$" + (salarioBruto * 0.08) + '\n' + "- Sindicato (5%): R$" + (salarioBruto * 0.05));
+        salarioLiquido = salarioBruto - (salarioBruto * 0.24);
+        System.out.println("= Salário Liquido: R$" + salarioLiquido);
     }
 }

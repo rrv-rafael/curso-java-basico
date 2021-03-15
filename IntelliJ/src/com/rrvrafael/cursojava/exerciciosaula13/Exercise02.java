@@ -1,16 +1,15 @@
-package com.rrvrafael.cursojava.exerciciosaula13;
+package com.rrvrafael.cursojava.redoneexercisesaula13;
 
 import java.util.Scanner;
 
 public class Exercise02 {
-
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
 
         int numero;
 
-        System.out.println("Digite um número: ");
+        System.out.println("Digite um número:");
         numero = scan.nextInt();
 
         System.out.println("O número informado foi " + numero);

@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula13;
+package com.rrvrafael.cursojava.redoneexercisesaula13;
 
 import java.util.Scanner;
 
@@ -10,11 +10,11 @@ public class Exercise09 {
 
         double tempFarenheit, tempCelsius;
 
-        System.out.println("Digite a temperatura em Farenheit: ");
+        System.out.println("Digite a temperatura em graus Farenheit:");
         tempFarenheit = scan.nextDouble();
 
         tempCelsius = (5 * (tempFarenheit - 32) / 9);
 
-        System.out.println("Temperatura convertida em Celsius: " + tempCelsius);
+        System.out.println("Temperatura em graus Celsius: " + tempCelsius);
     }
 }

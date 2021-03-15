@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula13;
+package com.rrvrafael.cursojava.redoneexercisesaula13;
 
 import java.util.Scanner;
 
@@ -8,14 +8,13 @@ public class Exercise07 {
 
         Scanner scan = new Scanner(System.in);
 
-        double ladoQuadrado, areaQuadrado;
+        double area, lado;
 
-        System.out.println("Digite o lado do quadrado: ");
-        ladoQuadrado = scan.nextInt();
+        System.out.println("Digite o lado do quadrado:");
+        lado = scan.nextDouble();
 
-        areaQuadrado = Math.pow(ladoQuadrado, 2);
+        area = Math.pow(lado, 2);
 
-        System.out.println("Área do quadrado: " + areaQuadrado);
-        System.out.println("Dobro da área do quadrado: " + (areaQuadrado * 2));
+        System.out.println("Área do quadrado: " + area);
     }
 }

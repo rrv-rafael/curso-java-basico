@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula15;
+package com.rrvrafael.cursojava.redoneexercisesaula15;
 
 import java.util.Scanner;
 
@@ -8,26 +8,26 @@ public class Exercise08 {
 
         Scanner scan = new Scanner(System.in);
 
-        double preco1, preco2, preco3;
+        double p1, p2, p3;
 
-        System.out.println("Digite o preço 1o produto:");
-        preco1 = scan.nextDouble();
-        System.out.println("Digite o preço 2o produto:");
-        preco2 = scan.nextDouble();
-        System.out.println("Digite o preço 3o produto:");
-        preco3 = scan.nextDouble();
+        System.out.println("Informe o preço do protudo 1:");
+        p1 = scan.nextDouble();
+        System.out.println("Informe o preço do produto 2:");
+        p2 = scan.nextDouble();
+        System.out.println("Informe o preço do produto 3:");
+        p3 = scan.nextDouble();
 
-        if (preco1 < preco2 && preco1 < preco3)
+        if (p1 < p2 && p1 < p3)
         {
-            System.out.println("O produto 1 é o que deve ser comprado.");
+            System.out.println("Você deve comprar o produto 1!");
         }
-        else if (preco2 < preco1 && preco2 < preco3)
+        else  if (p2 < p1 && p2 < p3)
         {
-            System.out.println("O produto 2 é o que deve ser comprado.");
+            System.out.println("Você deve comprar o produto 2!");
         }
         else
         {
-            System.out.println("O produto 3 é o que deve ser comprado.");
+            System.out.println("Você deve comprar o produto 3!");
         }
     }
 }

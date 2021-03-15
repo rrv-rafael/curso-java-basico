@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula15;
+package com.rrvrafael.cursojava.redoneexercisesaula15;
 
 import java.util.Scanner;
 
@@ -10,16 +10,16 @@ public class Exercise17 {
 
         int ano;
 
-        System.out.println("Digite o número correspondente ao ano que deseja:");
+        System.out.println("Digite um número correspondente ao ano:");
         ano = scan.nextInt();
 
-        if ((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0)
+        if ((ano % 400 == 0) || (ano % 100 != 0 && ano % 4 == 0))
         {
-            System.out.println("O ano " + ano + " é bissexto!");
+            System.out.println(ano + " é um ano bissexto!");
         }
         else
         {
-            System.out.println("O ano " + ano + " não é bissexto!");
+            System.out.println(ano + " não é um ano bissexto!");
         }
     }
 }

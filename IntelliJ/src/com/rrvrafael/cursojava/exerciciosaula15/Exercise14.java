@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula15;
+package com.rrvrafael.cursojava.redoneexercisesaula15;
 
 import java.util.Scanner;
 
@@ -9,47 +9,44 @@ public class Exercise14 {
         Scanner scan = new Scanner(System.in);
 
         double nota1, nota2, media;
-        String conceito;
+        String conceito, mensagem;
 
-        System.out.println("Digite a 1a nota parcial:");
+        System.out.println("Informe a 1a nota:");
         nota1 = scan.nextDouble();
-        System.out.println("Digite a 2a nota parcial:");
+        System.out.println("Informe a 2a nota:");
         nota2 = scan.nextDouble();
 
         media = (nota1 + nota2) / 2;
 
-        if (media >= 9 && media <= 10)
+        if (media >= 9)
         {
             conceito = "A";
+            mensagem = "APROVADO";
         }
         else if (media >= 7.5 && media < 9)
         {
             conceito = "B";
+            mensagem = "APROVADO";
         }
         else if (media >= 6 && media < 7.5)
         {
             conceito = "C";
+            mensagem = "APROVADO";
         }
         else if (media >= 4 && media < 6)
         {
             conceito = "D";
+            mensagem = "REPROVADO";
         }
         else
         {
             conceito = "E";
+            mensagem = "REPROVADO";
         }
 
-        System.out.println("Nota 1: " + nota1 + " | " + "Nota 2: " + nota2);
+        System.out.println("Nota 1: " + nota1 + '\n' + "Nota 2: " + nota2);
         System.out.println("Média: " + media);
         System.out.println("Conceito: " + conceito);
-
-        if (conceito.equals("A") || conceito.equals("B") || conceito.equals("C"))
-        {
-            System.out.println("APROVADO");
-        }
-        else
-        {
-            System.out.println("REPROVADO");
-        }
+        System.out.println(mensagem);
     }
 }

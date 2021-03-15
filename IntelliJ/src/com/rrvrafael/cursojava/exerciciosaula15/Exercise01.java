@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula15;
+package com.rrvrafael.cursojava.redoneexercisesaula15;
 
 import java.util.Scanner;
 
@@ -10,18 +10,22 @@ public class Exercise01 {
 
         int n1, n2;
 
-        System.out.println("Digite o 1o valor: ");
+        System.out.println("Informe o 1o número:");
         n1 = scan.nextInt();
-        System.out.println("Digite o 2o valor: ");
+        System.out.println("Informe o 2o número:");
         n2 = scan.nextInt();
 
         if (n1 > n2)
         {
-            System.out.println("O maior número é: " + n1);
+            System.out.println(n1 + " é o maior número.");
+        }
+        else if (n2 > n1)
+        {
+            System.out.println(n2 + " é o maior número.");
         }
         else
         {
-            System.out.println("O maior número é: " + n2);
+            System.out.println("Os números informados são iguais!");
         }
     }
 }

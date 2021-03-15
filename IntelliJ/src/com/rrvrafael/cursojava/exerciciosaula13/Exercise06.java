@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula13;
+package com.rrvrafael.cursojava.redoneexercisesaula13;
 
 import java.util.Scanner;
 
@@ -8,14 +8,13 @@ public class Exercise06 {
 
         Scanner scan = new Scanner(System.in);
 
-        double raioCirculo, areaCirculo;
+        double raio, area;
 
-        System.out.println("Digite o raio do circulo: ");
-        raioCirculo = scan.nextDouble();
+        System.out.println("Digite o raio do círculo:");
+        raio = scan.nextInt();
 
-        //areaCirculo = 3.14 * (raioCirculo * raioCirculo);
-        areaCirculo = Math.PI * Math.pow(raioCirculo, 2);
+        area = Math.PI * Math.pow(raio, 2);
 
-        System.out.println("Área do circulo: " + areaCirculo);
+        System.out.println("Área do círculo: " + area);
     }
 }

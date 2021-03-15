@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula15;
+package com.rrvrafael.cursojava.redoneexercisesaula15;
 
 import java.util.Scanner;
 
@@ -8,30 +8,30 @@ public class Exercise13 {
 
         Scanner scan = new Scanner(System.in);
 
-        int num;
+        int numero;
 
-        System.out.println("Entre com o dia da semana (1-7):");
-        num = scan.nextInt();
+        System.out.println("Digite um número:");
+        numero = scan.nextInt();
 
-        switch (num)
+        switch (numero)
         {
             case 1:
                 System.out.println("Domingo");
                 break;
             case 2:
-                System.out.println("Segunda");
+                System.out.println("Segunda-feira");
                 break;
             case 3:
-                System.out.println("Terça");
+                System.out.println("Terça-feira");
                 break;
             case 4:
-                System.out.println("Quarta");
+                System.out.println("Quarta-feira");
                 break;
             case 5:
-                System.out.println("Quinta");
+                System.out.println("Quinta-feira");
                 break;
             case 6:
-                System.out.println("Sexta");
+                System.out.println("Sexta-feira");
                 break;
             case 7:
                 System.out.println("Sábado");

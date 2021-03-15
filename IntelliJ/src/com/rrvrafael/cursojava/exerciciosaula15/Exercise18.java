@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula15;
+package com.rrvrafael.cursojava.redoneexercisesaula15;
 
 import java.util.Scanner;
 
@@ -8,18 +8,18 @@ public class Exercise18 {
 
         Scanner scan = new Scanner(System.in);
 
-        int num;
+        int numero;
 
-        System.out.println("Digite um número inteiro:");
-        num = scan.nextInt();
+        System.out.println("Digite um número para saber se é par ou ímpar:");
+        numero = scan.nextInt();
 
-        if (num % 2 == 0)
+        if (numero % 2 == 0)
         {
-            System.out.println("O número digitado é par!");
+            System.out.println(numero + " é um número par.");
         }
         else
         {
-            System.out.println("O número digitado é ímpar!");
+            System.out.println(numero + " é um número ímpar.");
         }
     }
 }

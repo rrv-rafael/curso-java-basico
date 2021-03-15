@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula15;
+package com.rrvrafael.cursojava.redoneexercisesaula15;
 
 import java.util.Scanner;
 
@@ -8,64 +8,59 @@ public class Exercise20 {
 
         Scanner scan = new Scanner(System.in);
 
-        int count = 0;
         String resposta;
+        int count = 0;
 
-        System.out.println("Telefonou para a vítima?");
-        resposta = scan.nextLine();
-
-        if (resposta.equals("sim"))
+        System.out.println("Você telefonou para a vítima?");
+        resposta = scan.next();
+        if (resposta.equalsIgnoreCase("sim"))
         {
             count++;
         }
 
         System.out.println("Esteve no local do crime?");
-        resposta = scan.nextLine();
-
-        if (resposta.equals("sim"))
+        resposta = scan.next();
+        if (resposta.equalsIgnoreCase("sim"))
         {
             count++;
         }
 
         System.out.println("Mora perto da vítima?");
-        resposta = scan.nextLine();
-
-        if (resposta.equals("sim"))
+        resposta = scan.next();
+        if (resposta.equalsIgnoreCase("sim"))
         {
             count++;
         }
 
         System.out.println("Devia para a vítima?");
-        resposta = scan.nextLine();
-
-        if (resposta.equals("sim"))
+        resposta = scan.next();
+        if (resposta.equalsIgnoreCase("sim"))
         {
             count++;
         }
 
         System.out.println("Já trabalhou com a vítima?");
-        resposta = scan.nextLine();
-
-        if (resposta.equals("sim"))
+        resposta = scan.next();
+        if (resposta.equalsIgnoreCase("sim"))
         {
             count++;
         }
 
         if (count == 2)
         {
-            System.out.println("Você é suspeita do crime!");
+            System.out.println("Suspeita!");
         }
-        else if (count == 3 || count == 4)
+        else if (count > 2 && count < 5)
         {
-            System.out.println("Você é cúmplice do crime!");
+            System.out.println("Cúmplice!");
         }
         else if (count == 5)
         {
-            System.out.println("Você é assassino do crime!");
+            System.out.println("Assassino!");
         }
         else
         {
-            System.out.println("Você é inocente do crime!");
+            System.out.println("Inocente!");
         }
     }
 }

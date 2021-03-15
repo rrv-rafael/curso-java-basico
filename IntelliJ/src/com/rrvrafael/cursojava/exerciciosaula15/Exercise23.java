@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciciosaula15;
+package com.rrvrafael.cursojava.redoneexercisesaula15;
 
 import java.util.Scanner;
 
@@ -8,76 +8,81 @@ public class Exercise23 {
 
         Scanner scan = new Scanner(System.in);
 
-        double qtdCarne, precoTotal, valorDesconto, valorPagar;
-        char tipoCarne, tipoPagamento;
+        String tipoCarne, tipoPagamento;
+        double valorTotal = 0, qtdKg;
 
-        System.out.println("Digite o tipo da carne (F - File Duplo | A - Alcatra | P - Picanha):");
-        tipoCarne = scan.next().charAt(0);
+        System.out.println("Informe o tipo de carne que deseja comprar (F - Filé Duplo | A - Alcatra | P - Picanha):");
+        tipoCarne = scan.next();
 
-        if (tipoCarne == 'F' || tipoCarne == 'A' || tipoCarne == 'P')
+        if (tipoCarne.equalsIgnoreCase("F") || tipoCarne.equalsIgnoreCase("A") || tipoCarne.equalsIgnoreCase("P"))
         {
-            System.out.println("Digite a quantidade de carne que deseja comprar:");
-            qtdCarne = scan.nextDouble();
-            System.out.println("Informe se a compra será feita com o cartão Tabajara (S - Sim | N - Não):");
-            tipoPagamento = scan.next().charAt(0);
+            System.out.println("Informe a quantidade (em Kg) que deseja comprar:");
+            qtdKg = scan.nextDouble();
 
-            if (tipoCarne == 'F')
+            System.out.println("Informe se o tipo de pagamento será com cartão Tabajara (S - Sim | N - Não):");
+            tipoPagamento = scan.next();
+
+            switch (tipoCarne)
             {
-                if (qtdCarne <= 5)
-                {
-                    precoTotal = qtdCarne * 4.9;
-                }
-                else
-                {
-                    precoTotal = qtdCarne * 5.8;
-                }
-            }
-            else if (tipoCarne == 'A')
-            {
-                if (qtdCarne <= 5)
-                {
-                    precoTotal = qtdCarne * 5.9;
-                }
-                else
-                {
-                    precoTotal = qtdCarne * 6.8;
-                }
-            }
-            else
-            {
-                if (qtdCarne <= 5)
-                {
-                    precoTotal = qtdCarne * 6.9;
-                }
-                else
-                {
-                    precoTotal = qtdCarne * 7.8;
-                }
+                case "F":
+                case "f":
+                    tipoCarne = "Filé Duplo";
+                    if (qtdKg <= 5)
+                    {
+                        valorTotal = qtdKg * 4.9;
+                    }
+                    else
+                    {
+                        valorTotal = qtdKg * 5.8;
+                    }
+                break;
+                case "A":
+                case "a":
+                    tipoCarne = "Alcatra";
+                    if (qtdKg <= 5)
+                    {
+                        valorTotal = qtdKg * 5.9;
+                    }
+                    else
+                    {
+                        valorTotal = qtdKg * 6.8;
+                    }
+                break;
+                case "P":
+                case "p":
+                    tipoCarne = "Picanha";
+                    if (qtdKg <= 5)
+                    {
+                        valorTotal = qtdKg * 6.9;
+                    }
+                    else
+                    {
+                        valorTotal = qtdKg * 7.8;
+                    }
+                break;
             }
 
-            System.out.println("Tipo da carne comprada: " + tipoCarne);
-            System.out.println("Quantidade de carne comprada: " + qtdCarne);
-            System.out.println("Preço total da compra: " + precoTotal);
+            System.out.println("Cupom fiscal:" + '\n');
+            System.out.println("Tipo de carne: " + tipoCarne);
+            System.out.println("Quantidade: " + qtdKg + "kg");
+            System.out.println("Preço total: " + valorTotal);
 
-            if (tipoPagamento == 'S')
+            if (tipoPagamento.equalsIgnoreCase("S"))
             {
-                valorDesconto = precoTotal * 0.05;
                 System.out.println("Tipo de pagamento: Cartão Tabajara");
+                System.out.println("Valor do desconto: " + valorTotal * 0.05);
+                System.out.println("Valor a pagar: " + (valorTotal - (valorTotal * 0.05)));
             }
             else
             {
-                valorDesconto = 0;
                 System.out.println("Tipo de pagamento: Cartão normal/Dinheiro");
+                System.out.println("Valor do desconto: 0");
+                System.out.println("Valor a pagar: " + valorTotal);
             }
-
-            valorPagar = precoTotal - valorDesconto;
-
-            System.out.println("Valor do desconto: " + valorDesconto);
-            System.out.println("Valor a pagar: " + valorPagar);
         }
         else
         {
-            System.out.println("Digite um tipo de carne válido, conforme solicitado!");
+            System.out.println("Tipo inválido! Informe o tipo conforme solicitado!");
         }
     }
 }
