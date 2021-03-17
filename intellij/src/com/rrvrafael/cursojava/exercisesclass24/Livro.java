@@ -1,17 +1,12 @@
-package com.rrvrafael.cursojava.exerciseclass24;
+package com.rrvrafael.cursojava.exercisesclass24;
 
-import java.util.Date;
-
-public class LivroBiblioteca {
+public class Livro {
 
     String nome;
     String autor;
     int qtdPaginas;
     int anoLancamento;
     String isbn;
-    boolean emprestado;
-    Date dataEntrega;
-    String emprestadoA;
 
     /*double altura;
     double largura;
@@ -20,10 +15,8 @@ public class LivroBiblioteca {
     String tipoCapa;
     String titulo;
     String subTitulo;
-    String escritor;
+    String autor;
     String editora;
     String volume;
-    int qtdDisponivel;
-    int qtdEmprestado;
-    int qtdTotal;*/
+    String textoHistoria;*/
 }

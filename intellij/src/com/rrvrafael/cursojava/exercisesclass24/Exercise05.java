@@ -1,4 +1,4 @@
-package com.rrvrafael.cursojava.exerciseclass24;
+package com.rrvrafael.cursojava.exercisesclass24;
 
 public class Exercise05 {
 
