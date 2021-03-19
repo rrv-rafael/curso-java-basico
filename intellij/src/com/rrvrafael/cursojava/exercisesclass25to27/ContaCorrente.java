@@ -9,18 +9,28 @@ public class ContaCorrente {
 
     double realizarSaque(double saque)
     {
-        if (saldo > 0)
+        if (saldo >= saque)
         {
             saldo -= saque;
 
             return saldo;
         }
 
-        return 0;
+        return -1;
     }
 
     void realizarDeposito(double deposito)
     {
         saldo += deposito;
+    }
+
+    double consultarSaldo()
+    {
+        return saldo;
+    }
+
+    boolean mostrarStatus()
+    {
+        return status;
     }
 }
