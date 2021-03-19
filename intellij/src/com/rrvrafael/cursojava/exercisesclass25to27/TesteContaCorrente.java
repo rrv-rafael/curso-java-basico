@@ -12,16 +12,14 @@ public class TesteContaCorrente {
 
         conta.saldo = 1000;
 
-        double saque;
+        double saque, deposito;
 
         System.out.println("Digite a quantia que deseja sacar:");
         saque = scan.nextDouble();
 
-        //conta.saque(saque);
-
         double retornoSaque;
 
-        retornoSaque = conta.saque(saque);
+        retornoSaque = conta.realizarSaque(saque);
 
         if (retornoSaque > 0)
         {
@@ -31,5 +29,12 @@ public class TesteContaCorrente {
         {
             System.out.println("Saldo indisponível para efetuar o saque!");
         }
+
+        System.out.println("Digite o valor do depósito que deseja realizar:");
+        deposito = scan.nextDouble();
+
+        conta.realizarDeposito(deposito);
+
+        System.out.println("Saldo após depósito: " + conta.saldo);
     }
 }

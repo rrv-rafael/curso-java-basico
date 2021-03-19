@@ -7,13 +7,20 @@ public class ContaCorrente {
     boolean status;
     double limite;
 
-    double saque(double saque)
+    double realizarSaque(double saque)
     {
         if (saldo > 0)
         {
-            return saldo - saque;
+            saldo -= saque;
+
+            return saldo;
         }
 
         return 0;
+    }
+
+    void realizarDeposito(double deposito)
+    {
+        saldo += deposito;
     }
 }
