@@ -33,9 +33,9 @@ public class TesteContaCorrente {
 
                 retornoSaque = conta.realizarSaque(saque);
 
-                if (retornoSaque >= 0)
+                if (retornoSaque > 0)
                 {
-                    System.out.println("\nSaldo após saque: " + retornoSaque + "\n");
+                    System.out.println("\nSaldo após saque: " + conta.saldo + "\n");
                 }
                 else
                 {

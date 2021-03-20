@@ -13,10 +13,10 @@ public class ContaCorrente {
         {
             saldo -= saque;
 
-            return saldo;
+            return 1;
         }
 
-        return -1;
+        return 0;
     }
 
     void realizarDeposito(double deposito)
