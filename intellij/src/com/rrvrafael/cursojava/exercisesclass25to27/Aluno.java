@@ -5,17 +5,51 @@ public class Aluno {
     String nome;
     String matricula;
     String cursoMatriculado;
-    String disciplinas[][] = {{"Cálculo", "5"}, {"Álgebra", "7"}, {"Arquitetura", "8"}};
+    String[] disciplinas;
+    double[] notas;
 
-    void mostrarDisciplinasNotas()
+    void mostrarDisciplinas(String nomeAluno, String matriculaAluno)
     {
-        for (String[] disciplina : disciplinas)
+        if (nomeAluno.equals(nome) || matriculaAluno.equals(matricula))
         {
-            for (String disci : disciplina)
+            System.out.println("Disciplinas cursadas:");
+            for (String disciplina : disciplinas)
             {
-                System.out.print(disci + " ");
+                System.out.println(disciplina);
             }
-            System.out.println();
         }
+        else
+        {
+            System.out.println("Nome ou RA informado não exite!");
+        }
+    }
+
+    void mostrarNotas(String nomeAluno, String matriculaAluno)
+    {
+        if (nomeAluno.equals(nome) || matriculaAluno.equals(matricula))
+        {
+            System.out.println("Notas:");
+            for (double nota : notas)
+            {
+                System.out.println(nota);
+            }
+        }
+        else
+        {
+            System.out.println("Nome ou RA informado não existe!");
+        }
+    }
+
+    boolean verificarNota()
+    {
+        for (double nota : notas)
+        {
+            if (nota >= 7)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
