@@ -26,7 +26,7 @@ public class Aluno {
         {
             System.out.println(disciplinas[i] + " - " + notas[i]);
         }
-        
+
         System.out.println();
     }
 
