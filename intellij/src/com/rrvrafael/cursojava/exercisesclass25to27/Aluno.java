@@ -8,58 +8,40 @@ public class Aluno {
     String[] disciplinas;
     double[] notas;
 
-    void mostrarDisciplinas(String matriculaAluno)
+    void mostrarDisciplinas()
     {
-        if (matriculaAluno.equals(matricula))
+        System.out.println("Disciplinas cursadas:");
+        for (String disciplina : disciplinas)
         {
-            System.out.println("Disciplinas cursadas:");
-            for (String disciplina : disciplinas)
-            {
-                System.out.println(disciplina);
-            }
+            System.out.println(disciplina);
         }
-        else
-        {
-            System.out.println("Nome ou RA informado não exite!");
-        }
+
+        System.out.println();
     }
 
-    void mostrarNotas(String matriculaAluno)
+    void mostrarNotas()
     {
-        if (matriculaAluno.equals(matricula))
+        System.out.println("Notas:");
+        for (int i = 0; i < notas.length; i++)
         {
-            System.out.println("Notas:");
-            for (int i = 0; i < notas.length; i++)
-            {
-                System.out.println(disciplinas[i] + " - " + notas[i]);
-            }
-            System.out.println();
+            System.out.println(disciplinas[i] + " - " + notas[i]);
         }
-        else
-        {
-            System.out.println("Nome ou RA informado não existe!");
-        }
+        
+        System.out.println();
     }
 
-    void verificarNota(String matriculaAluno)
+    void verificarNota()
     {
-        if (matriculaAluno.equals(matricula))
-        {
-            System.out.println("Discipinas aprovadas:");
+        System.out.println("Discipinas aprovadas:");
 
-            for (int i = 0; i < notas.length; i++)
+        for (int i = 0; i < notas.length; i++)
+        {
+            if (notas[i] >= 7 )
             {
-                if (notas[i] >= 7 )
-                {
-                    System.out.println("Aprovado(a) na disciplina " + disciplinas[i] + " com nota " + notas[i]);
-                }
+                System.out.println("Aprovado(a) na disciplina " + disciplinas[i] + " com nota " + notas[i]);
             }
-            System.out.println();
-        }
-        else
-        {
-            System.out.println("Nome ou RA informado não exite!");
         }
 
+        System.out.println();
     }
 }

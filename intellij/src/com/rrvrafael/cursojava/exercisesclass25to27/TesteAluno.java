@@ -10,7 +10,7 @@ public class TesteAluno {
         Aluno aluno = new Aluno();
 
         int option;
-        String matriculaAluno = "";
+        String matriculaAluno;
         boolean sair = false;
 
         aluno.nome = "Rafael";
@@ -25,35 +25,42 @@ public class TesteAluno {
         System.out.println("Informe a matrícula do aluno:");
         matriculaAluno = scan.next();
 
-        do
+        if (matriculaAluno.equals(aluno.matricula))
         {
-            System.out.println("Com este sistema você poderá realizar as seguintes ações:");
-            System.out.println("1 - Visualizar disciplinas cursadas\n2 - Visualizar notas\n3 - Visualizar disciplinas aprovadas\n0 - Finalizar seção");
-            System.out.println("\nDigite a opção desejada:");
-            option = scan.nextInt();
+            do
+            {
+                System.out.println("Com este sistema você poderá realizar as seguintes ações:");
+                System.out.println("1 - Visualizar disciplinas cursadas\n2 - Visualizar notas\n3 - Visualizar disciplinas aprovadas\n0 - Finalizar seção");
+                System.out.println("\nDigite a opção desejada:");
+                option = scan.nextInt();
 
-            if (option == 1)
-            {
-                aluno.mostrarDisciplinas(matriculaAluno);
+                if (option == 1)
+                {
+                    aluno.mostrarDisciplinas();
+                }
+                else if (option == 2)
+                {
+                    aluno.mostrarNotas();
+                }
+                else if (option == 3)
+                {
+                    aluno.verificarNota();
+                }
+                else if (option == 0)
+                {
+                    sair = true;
+                    System.out.println("Encerrando a aplicação...");
+                }
+                else
+                {
+                    System.out.println("Digite uma opção válida!");
+                }
             }
-            else if (option == 2)
-            {
-                aluno.mostrarNotas(matriculaAluno);
-            }
-            else if (option == 3)
-            {
-                aluno.verificarNota(matriculaAluno);
-            }
-            else if (option == 0)
-            {
-                sair = true;
-                System.out.println("Encerrando a aplicação...");
-            }
-            else
-            {
-                System.out.println("Digite uma opção válida!");
-            }
+            while (!sair);
         }
-        while (!sair);
+        else
+        {
+            System.out.println("Matrícula informada não exite!");
+        }
     }
 }
