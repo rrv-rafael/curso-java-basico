@@ -10,7 +10,8 @@ public class TesteAluno {
         Aluno aluno = new Aluno();
 
         int option;
-        String nomeAluno = "", matriculaAluno = "";
+        String matriculaAluno = "";
+        boolean sair = false;
 
         aluno.nome = "Rafael";
         aluno.matricula = "14069173";
@@ -18,30 +19,41 @@ public class TesteAluno {
         aluno.disciplinas = new String[3];
         aluno.disciplinas = new String[] {"Cálculo", "Álgebra", "Arquitetura"};
         aluno.notas = new double[3];
-        aluno.notas = new double[] {5.5, 7,6};
+        aluno.notas = new double[] {7.5, 5, 8};
 
         System.out.println("* * * Sistema Acadêmico * * *");
-        System.out.println("Com este sistema você poderá realizar as seguintes ações:");
-        System.out.println("1 - Buscar por nome\n2 - Buscar por matrícula\n0 - Finalizar seção");
-        System.out.println("\nDigite a opção desejada:");
-        option = scan.nextInt();
+        System.out.println("Informe a matrícula do aluno:");
+        matriculaAluno = scan.next();
 
-        if (option == 1)
+        do
         {
-            System.out.println("Informe o nome do aluno:");
-            nomeAluno = scan.next();
-            aluno.mostrarDisciplinas(nomeAluno, matriculaAluno);
+            System.out.println("Com este sistema você poderá realizar as seguintes ações:");
+            System.out.println("1 - Visualizar disciplinas cursadas\n2 - Visualizar notas\n3 - Visualizar disciplinas aprovadas\n0 - Finalizar seção");
+            System.out.println("\nDigite a opção desejada:");
+            option = scan.nextInt();
 
-            if (aluno.verificarNota())
+            if (option == 1)
             {
-                
+                aluno.mostrarDisciplinas(matriculaAluno);
+            }
+            else if (option == 2)
+            {
+                aluno.mostrarNotas(matriculaAluno);
+            }
+            else if (option == 3)
+            {
+                aluno.verificarNota(matriculaAluno);
+            }
+            else if (option == 0)
+            {
+                sair = true;
+                System.out.println("Encerrando a aplicação...");
+            }
+            else
+            {
+                System.out.println("Digite uma opção válida!");
             }
         }
-        else if (option == 2)
-        {
-            System.out.println("Informe a matrícula do aluno:");
-            matriculaAluno = scan.next();
-            aluno.mostrarDisciplinas(nomeAluno, matriculaAluno);
-        }
+        while (!sair);
     }
 }

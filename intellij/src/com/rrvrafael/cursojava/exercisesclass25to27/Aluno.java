@@ -8,9 +8,9 @@ public class Aluno {
     String[] disciplinas;
     double[] notas;
 
-    void mostrarDisciplinas(String nomeAluno, String matriculaAluno)
+    void mostrarDisciplinas(String matriculaAluno)
     {
-        if (nomeAluno.equals(nome) || matriculaAluno.equals(matricula))
+        if (matriculaAluno.equals(matricula))
         {
             System.out.println("Disciplinas cursadas:");
             for (String disciplina : disciplinas)
@@ -24,15 +24,16 @@ public class Aluno {
         }
     }
 
-    void mostrarNotas(String nomeAluno, String matriculaAluno)
+    void mostrarNotas(String matriculaAluno)
     {
-        if (nomeAluno.equals(nome) || matriculaAluno.equals(matricula))
+        if (matriculaAluno.equals(matricula))
         {
             System.out.println("Notas:");
-            for (double nota : notas)
+            for (int i = 0; i < notas.length; i++)
             {
-                System.out.println(nota);
+                System.out.println(disciplinas[i] + " - " + notas[i]);
             }
+            System.out.println();
         }
         else
         {
@@ -40,16 +41,25 @@ public class Aluno {
         }
     }
 
-    boolean verificarNota()
+    void verificarNota(String matriculaAluno)
     {
-        for (double nota : notas)
+        if (matriculaAluno.equals(matricula))
         {
-            if (nota >= 7)
+            System.out.println("Discipinas aprovadas:");
+
+            for (int i = 0; i < notas.length; i++)
             {
-                return true;
+                if (notas[i] >= 7 )
+                {
+                    System.out.println("Aprovado(a) na disciplina " + disciplinas[i] + " com nota " + notas[i]);
+                }
             }
+            System.out.println();
+        }
+        else
+        {
+            System.out.println("Nome ou RA informado não exite!");
         }
 
-        return false;
     }
 }
